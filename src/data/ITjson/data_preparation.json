@@ -1,0 +1,43 @@
+{
+    "title": "Data Preparation",
+    "sections": {
+      "essential": {
+        "description": "Data preparation is the process of turning messy, scattered, and incomplete data into a clean, usable, and reliable format for analysis. Without it, companies face delays, compliance risks, and loss of valuable trends, as decisions get made on outdated or inaccurate information.",
+        "ai_driven_automation_strengthens": "AI-driven automation strengthens data preparation by:",
+        "points": [
+          "Detecting and correcting errors to maintain accuracy.",
+          "Making the entire flow and transformation of data visible for transparency.",
+          "Preserving both past and present details so historical trends remain intact."
+        ],
+        "conclusion": "Together, these practices ensure businesses work with clean, transparent, and timely data—forming a strong base for trustworthy analytics and confident decision-making."
+      },
+      "pain_point": {
+        "description": "Companies often deal with messy, incomplete, and outdated data. With poor visibility, errors are harder to fix, compliance risks increase, decisions get delayed, and valuable trends are lost.",
+        "points": [
+          "Compliance risks increase without proper oversight.",
+          "Delays in updates slow down decision-making.",
+          "Missing history erases valuable long-term trends."
+        ]
+      },
+      "smart_approach": {
+        "description": "AI-driven automation continuously cleans, tracks, updates, and preserves data, making it accurate, timely, and trustworthy for decision-making.",
+        "points": [
+          "Detecting and fixing errors automatically to ensure accuracy.",
+          "Showing the complete flow and changes of data for better visibility.",
+          "Capturing updates instantly from source systems to keep data fresh.",
+          "Preserving both old and new details so historical insights are never lost."
+        ],
+        "conclusion": "Together, these automated processes build a strong foundation for reliable analytics and confident decision-making."
+      },
+      "benefits": {
+        "description": "AI agents ensure data stays clean, accurate, and always up to date by fixing errors, tracking changes, and preserving history. This creates reliable insights and smarter decisions for businesses by",
+        "points": [
+          "Continuously detects and corrects errors, ensuring reliable data for every decision.",
+          "Maintains both old and new data, enabling long-term trend analysis without losing context.",
+          "Automates repetitive tasks, cutting down manual work and speeding up decision-making.",
+          "Reduces risks by ensuring data practices meet governance and regulatory standards."
+        ]
+      }
+    },
+    "tagline": "Smarter data preparation empowers intelligent business"
+  }

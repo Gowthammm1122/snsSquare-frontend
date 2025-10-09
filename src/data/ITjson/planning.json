@@ -1,0 +1,49 @@
+{
+  "industry": "IT",
+  "title": "Smarter Planning with Agentic AI",
+  "description": "From data to decisions—smarter planning for modern software teams.",
+  "tagline": "From scattered data inputs to seamless execution",
+  "sections": [
+    {
+      "id": "current-landscape",
+      "title": "The Current Landscape of Planning",
+      "content": "Agentic AI streamlines autonomous agents to handle requirement gathering, draft timelines, and risk checks—while decision-makers focus on priorities and approvals.",
+      "features": [
+        "Scattered inputs slow alignment across teams.",
+        "Agents manage requirement gathering, timelines, and risk checks.",
+        "Decision-makers stay focused on priorities and approvals."
+      ]
+    },
+    {
+      "id": "traditional-planning-fails",
+      "title": "Why Traditional Planning Fails",
+      "content": "Traditional planning is weighed down by fragmented inputs, shifting priorities, and delayed risk detection—slowing execution and driving costs higher.",
+      "challenges": [
+        "Scattered requirements across tools and teams.",
+        "Static timelines that fail when priorities shift.",
+        "Manual resource planning is prone to delays."
+      ]
+    },
+    {
+      "id": "agentic-way-forward",
+      "title": "The Agentic AI Way Forward",
+      "content": "Agentic AI unifies planning into one adaptive flow, using specialized agents that collaborate with decision-makers to keep strategies clear, flexible, and resilient.",
+      "features": [
+        "Centralized requirement collection and prioritization.",
+        "Real-time adjustments to timelines and resources.",
+        "Risk detection and mitigation at an early stage."
+      ]
+    },
+    {
+      "id": "why-this-matters",
+      "title": "Why This Matters",
+      "content": "Agentic AI delivers faster alignment, adaptive execution, and cost efficiency—empowering modern software teams to plan with confidence.",
+      "benefits": [
+        "Accelerated decision-making with automated inputs.",
+        "Agility to adjust timelines and resources in real-time.",
+        "Optimized costs through early risk detection and resource planning.",
+        "Stronger collaboration between AI agents and human decision-makers."
+      ]
+    }
+  ]
+}

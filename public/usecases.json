@@ -1,0 +1,698 @@
+{
+  "ai-forecasting": {
+    "id": "ai-forecasting",
+    "title": "AI-Powered Demand Forecasting",
+    "category": "Supply Chain",
+    "summary": "Turning real-time data into resilient planning",
+    "heroTitle": "Forecasting Reimagined with AI Agents",
+    "description": "Traditional demand forecasting can't keep up with today's markets. Agents unlock speed, accuracy and autonomy in the process. In supply chain management, guessing demand is no longer an option. Markets evolve quickly, customers change even faster, and static models fall short.",
+    "image": "/images/ai_demand.png",
+    "tagline": "Turning real-time data into resilient planning",
+    "sections": [
+      {
+        "id": "rethinking-forecasting",
+        "title": "Rethinking Demand Forecasting",
+        "content": "Traditional demand forecasting can't keep up with today's markets. Agents unlock speed, accuracy and autonomy in the process. In supply chain management, guessing demand is no longer an option. Markets evolve quickly, customers change even faster, and static models fall short. Our AI-powered forecasting solution leverages real-time data, machine learning, and intelligent agents to provide precise insights—helping businesses stay efficient, cut waste, and grow with confidence."
+      },
+      {
+        "id": "why-traditional-fails",
+        "title": "Why Traditional Forecasting Fails",
+        "content": "Legacy forecasting struggles because it wasn't built for today's complexity and speed of modern supply chains.",
+        "challenges": [
+          "Multiple sales channels, fluctuating lead times, and macroeconomic variables make demand harder to predict.",
+          "Static, historical models fail to adjust quickly to sudden market changes.",
+          "Businesses are left with excess safety stock, inflated carrying costs, and frequent stockouts.",
+          "Many organizations still depend on outdated information and rigid tools, reducing agility and preventing proactive decisions."
+        ]
+      },
+      {
+        "id": "redefining-forecasting",
+        "title": "Redefining Demand Forecasting",
+        "content": "AI-driven forecasting is not just an incremental improvement—it is a shift toward intelligent automation and orchestrated decision-making across the supply chain.",
+        "features": [
+          "Autonomously and continuously monitor sales, market signals, and external disruptions.",
+          "Uses models to detect hidden demand patterns.",
+          "Autonomously and instantly adapt forecasts to short-term shifts such as promotions or sudden spikes.",
+          "Translates recommendations into clear, data-driven decisions that align planning, sourcing, and distribution."
+        ],
+        "additionalContent": "With agents at the core, automation driving scale, and intelligence guiding decisions, the system ensures supply chains can plan proactively, react instantly, and sustain long-term resilience."
+      },
+      {
+        "id": "why-it-matters",
+        "title": "Why Does It Matter?",
+        "content": "AI-driven demand forecasting delivers more than predictions—it enables intelligent automation that transforms supply chain performance.",
+        "benefits": [
+          "Achieve higher forecast accuracy with agent-driven insights.",
+          "Automate planning processes to reduce manual effort and errors.",
+          "Optimize working capital by orchestrating inventory across networks.",
+          "Increase agility to respond instantly to disruptions or surges.",
+          "Cut waste and overproduction, driving sustainable operations.",
+          "Boost profitability with decisions aligned to real-time demand signals."
+        ]
+      }
+    ],
+    "relatedUseCases": ["agentic-procurement", "pricing-intelligence", "smart-inventory"]
+  },
+  "agentic-procurement": {
+    "id": "agentic-procurement",
+    "title": "Agentic AI Procurement",
+    "category": "Supply Chain",
+    "summary": "Effortless automation for sourcing & approvals",
+    "heroTitle": "Reimagine Procurement with Agentic AI",
+    "description": "Smart automation for sourcing, approvals, and suppliers — no complexity, just results. Modern procurement needs to be fast, smart, and flexible.",
+    "image": "/images/ai_procurement.png",
+    "tagline": "Effortless automation for sourcing & approvals",
+    "sections": [
+      {
+        "id": "procurement-pulse",
+        "title": "Procurement Has a New Pulse",
+        "content": "Modern procurement needs to be fast, smart, and flexible. Our platform uses AI to make buying decisions smarter — not just faster — and grows with your business.",
+        "features": [
+          "AI that thinks like a buyer: Makes decisions based on your goals, not just rules.",
+          "Scales with your business: Works the same whether you buy 10 items or 10,000.",
+          "Built for change: Adapts to new policies, suppliers, and priorities — no IT help needed."
+        ]
+      },
+      {
+        "id": "procurement-bottleneck",
+        "title": "Procurement Bottleneck",
+        "content": "As companies scale, reliance on manual processes and rigid systems undermines procurement efficiency — slowing decision-making, limiting automation, and preventing intelligent agents from driving speed, savings, and agility.",
+        "challenges": [
+          "Sourcing is manual- Teams waste effort on emails and spreadsheets instead of deploying automated agents to find and assess suppliers.",
+          "Approvals break flow- Human-dependent routing creates bottlenecks — a single missing approver stalls the entire autonomous workflow.",
+          "Negotiations lack intelligence- Buyers guess prices instead of using AI-powered agents with real-time data and historical insights."
+        ]
+      },
+      {
+        "id": "intelligence-upgrade",
+        "title": "Intelligence Upgrade",
+        "content": "We automate procurement using your business rules — not rigid software logic. The system makes smart, compliant decisions in real time.",
+        "features": [
+          "Smart sourcing: AI sends RFQs and picks top suppliers in seconds.",
+          "Smarter approvals: Routes requests based on context — not just dollar amount.",
+          "Better deals: AI suggests negotiation terms using past data and market trends."
+        ]
+      },
+      {
+        "id": "autonomous-impact",
+        "title": "Autonomous Impact",
+        "content": "Beyond automation: intelligent procurement that delivers measurable impact.",
+        "benefits": [
+          "Accelerated sourcing — Cut cycle times from weeks to hours with AI-driven RFQs and supplier selection.",
+          "Double-digit cost savings — AI analyzes market data and historical spend to optimize pricing and terms.",
+          "Always-compliant decisions — Dynamic policy adaptation ensures compliance, no manual updates required.",
+          "Strategic procurement teams — Automate execution so buyers can focus on innovation, risk, and value.",
+          "Effortless scalability — Perform at peak efficiency, whether managing 10 or 10,000 purchases.",
+          "Self-improving intelligence — The system learns from every transaction, getting smarter over time."
+        ],
+        "additionalContent": "With Agentic AI, you're not just automating tasks — you're building a self-optimizing procurement function that evolves with your business."
+      }
+    ],
+    "relatedUseCases": ["ai-forecasting", "pricing-intelligence", "agentic-logistics"]
+  },
+  "pricing-intelligence": {
+    "id": "pricing-intelligence",
+    "title": "AI Pricing Intelligence",
+    "category": "Supply Chain",
+    "summary": "Turning pricing into profit with intelligence.",
+    "heroTitle": "Agentic Next-Gen Pricing Intelligence: Redefining Supply Chain Profitability",
+    "description": "Supply chain pricing is constantly shifting, shaped by raw material costs, logistics, demand, and competition. AI-driven automation changes this by using intelligent agents to track costs and competitor moves in real time.",
+    "image": "/images/ai_pricing.png",
+    "tagline": "Turning pricing into profit with intelligence",
+    "sections": [
+      {
+        "id": "pricing-reality",
+        "title": "The Reality of Pricing in Motion",
+        "content": "Supply chain pricing is constantly shifting, shaped by raw material costs, logistics, demand, and competition. Traditional methods, reliant on periodic reviews and manual reconciliation, are too slow and error-prone. AI-driven automation changes this by using intelligent agents to track costs and competitor moves in real time, adjust prices dynamically, and reconcile invoices accurately—turning pricing into a faster, smarter, and more profitable process."
+      },
+      {
+        "id": "pricing-roadblocks",
+        "title": "Roadblocks in Pricing Success",
+        "content": "Pricing in the supply chain faces challenges like unpredictable raw material and logistics costs, difficulty in tracking demand and competitor shifts, errors in manual invoice reconciliation, and slow decision-making that reduces profitability.",
+        "challenges": [
+          "Price Volatility Challenges: Unpredictable raw material and logistics costs make pricing unstable.",
+          "Demand & Competitor Tracking Issues: Difficulty in monitoring shifting demand and competitor prices impacts accuracy.",
+          "Invoice Reconciliation Errors: Manual reconciliation leads to mistakes, disputes, and delays.",
+          "Decision-Making Delays: Slow pricing decisions reduce profitability and competitiveness."
+        ]
+      },
+      {
+        "id": "breaking-barriers",
+        "title": "Breaking Barriers with Agentic AI",
+        "content": "AI-driven automation streamlines supply chain pricing by enabling real-time analysis, dynamic adjustments, accurate invoice reconciliation, and faster, error-free decisions for improved profitability.",
+        "features": [
+          "AI enables real-time tracking of costs, demand, and competitor trends.",
+          "Prices are adjusted quickly to match market shifts.",
+          "Automated invoice checks reduce errors and disputes.",
+          "Smarter coordination improves efficiency and profitability."
+        ]
+      },
+      {
+        "id": "smarter-pricing-edge",
+        "title": "The Edge of Smarter Pricing",
+        "content": "AI agents transform pricing into a strategic advantage by combining automation, real-time data, and intelligence.",
+        "benefits": [
+          "Improved Accuracy: Agents analyze live data for precise pricing.",
+          "Market Agility: Dynamically adapt to cost changes and demand shifts.",
+          "Error Reduction: Automated workflows cut human errors and disputes.",
+          "Enhanced Coordination: Strengthen collaboration across suppliers and logistics.",
+          "Profitability Boost: Unlock higher margins and sustainable growth."
+        ],
+        "additionalContent": "With AI agents, pricing moves from guesswork to a proactive, data-driven strategy that powers resilience across the supply chain."
+      }
+    ],
+    "relatedUseCases": ["agentic-procurement", "agentic-logistics", "smart-inventory"]
+  },
+  "agentic-logistics": {
+    "id": "agentic-logistics",
+    "title": "AI Logistics Solutions",
+    "category": "Supply Chain",
+    "summary": "Where Smart Decisions Meet Smooth DeliveriesTurning pricing into profit with intelligence.",
+    "heroTitle": "Revolutionizing Logistics with AI Agentic Solutions",
+    "description": "Logistics companies face rising costs, delays, and inefficiencies due to limited visibility, poor route planning, missed maintenance, and fluctuating fuel expenses.",
+    "image": "/images/ai_logistics.jpg",
+    "tagline": "Where Smart Decisions Meet Smooth Deliveries",
+    "sections": [
+      {
+        "id": "logistics-overview",
+        "title": "Overview",
+        "content": "Logistics companies face rising costs, delays, and inefficiencies due to limited visibility, poor route planning, missed maintenance, and fluctuating fuel expenses. An AI agentic logistics solution addresses these challenges with real-time tracking, predictive maintenance, fuel optimization, dynamic route planning, smart pricing, and a centralized decision dashboard."
+      },
+      {
+        "id": "logistics-struggle",
+        "title": "The Struggle",
+        "content": "Logistics companies face rising costs and delays as traditional systems struggle with limited visibility and inefficiency. Without smarter solutions, reliability drops and competitiveness weakens.",
+        "challenges": [
+          "Limited visibility makes it difficult to handle real-time challenges like traffic and demand spikes.",
+          "Missed preventive maintenance and poor route planning cause downtime and late deliveries.",
+          "Fluctuating fuel costs and manual pricing increase operational expenses."
+        ]
+      },
+      {
+        "id": "logistics-shift",
+        "title": "The Shift",
+        "content": "AI agentic logistics solution designed to automate tracking, optimize routing, predict maintenance, and adapt pricing strategies in real-time.",
+        "features": [
+          "Real-time Tracking – Automates visibility of vehicle movements, enabling full operational control.",
+          "Proactive Maintenance – Predicts failures and sends alerts, reducing breakdowns and downtime.",
+          "Fuel & Utilization Optimization – Identifies fuel consumption patterns and underused vehicles.",
+          "Dynamic Route Planning – Optimizes delivery paths using live traffic, weather, and demand conditions.",
+          "Smart Pricing – Suggests pricing strategies by factoring in distance, fuel costs, and demand.",
+          "Decision Integration – Consolidates all insights into a centralized dashboard with automated recommendations."
+        ]
+      },
+      {
+        "id": "logistics-success",
+        "title": "Success",
+        "content": "The AI-driven system made logistics smarter by giving full vehicle visibility, cutting downtime with predictive maintenance, improving fuel use, and optimizing assets. Smart routing and pricing boosted on-time deliveries and profits, while a unified dashboard lowered costs and improved customer satisfaction."
+      }
+    ],
+    "relatedUseCases": ["smart-inventory", "pricing-intelligence", "agentic-procurement"]
+  },
+  "smart-inventory": {
+    "id": "smart-inventory",
+    "title": "AI Inventory Control",
+    "category": "Supply Chain",
+    "summary": "Right Stock, Right Time, Every Time",
+    "heroTitle": "The Future of Intelligent Inventory Control using Agentic AI",
+    "description": "Traditional inventory practices can't keep pace with today's dynamic supply chains. Intelligent agents, automation, and real-time orchestration are reshaping how businesses track, store, and move goods.",
+    "image": "/images/ai_inventory.jpg",
+    "tagline": "Right Stock, Right Time, Every Time",
+    "sections": [
+      {
+        "id": "smart-inventory-overview",
+        "title": "Smart Inventory",
+        "content": "Traditional inventory practices can't keep pace with today's dynamic supply chains. Intelligent agents, automation, and real-time orchestration are reshaping how businesses track, store, and move goods. Inventory management is the backbone of efficient supply chains. Yet manual processes, static tools, and lagging insights often create imbalances—excess stock in some warehouses, shortages in others, and inflated storage costs overall. By applying AI-driven automation and agentic intelligence, organizations can achieve smarter, more resilient inventory control that minimizes costs and maximizes responsiveness."
+      },
+      {
+        "id": "stock-struggles",
+        "title": "Stock Struggles",
+        "content": "Managing inventory across multiple warehouses is complex, error-prone, and often reactive. Even with sensors, RFID, and tracking systems, organizations struggle to turn raw data into meaningful, actionable insights.",
+        "challenges": [
+          "Demand volatility: Frequent shifts in customer demand make manual planning inaccurate.",
+          "Visibility gaps: Real-time stock monitoring across locations remains limited.",
+          "Data overload: Sensors and tracking devices collect information, but lack intelligence to convert it into decisions.",
+          "Manual handling errors: Reliance on people for updates and reordering often results in mistakes, delays, and inefficiencies."
+        ]
+      },
+      {
+        "id": "chaos-to-control",
+        "title": "From Chaos to Control",
+        "content": "AI-driven inventory systems go beyond visibility—they deliver real-time automation, agentic orchestration, and intelligent decision-making.",
+        "features": [
+          "Stock analysis & timely reordering: Ensures the right products are available at the right time.",
+          "Automated warehouse operations: Reduces errors, improves accuracy, and streamlines workflows.",
+          "Data-driven insights: Converts raw inputs from sensors and RFID into actionable strategies.",
+          "Optimized inventory orchestration: Creates faster, scalable, and cost-efficient operations across networks."
+        ],
+        "additionalContent": "With autonomous agents monitoring and adjusting stock levels continuously, businesses can maintain balance, improve efficiency, and respond instantly to demand shifts."
+      },
+      {
+        "id": "intelligent-advantage",
+        "title": "Intelligent Inventory Advantage",
+        "content": "AI-powered inventory management delivers more than efficiency—it creates a competitive edge. By reducing errors through automation, predicting demand for precise stock levels, and turning data into actionable insights, businesses lower storage costs, prevent stockouts, and avoid overstocking. Real-time tracking ensures agility, while scalability allows the system to adapt seamlessly to fluctuating demand. The result is inventory that is smarter, leaner, and built for modern supply chain resilience."
+      }
+    ],
+    "relatedUseCases": ["ai-forecasting", "agentic-logistics", "pricing-intelligence"]
+  },
+  "smarter-planning": {
+    "id": "smarter-planning",
+    "title": "AI-Powered Planning",
+    "category": "Technology",
+    "summary": "From scattered data inputs to seamless execution.",
+    "heroTitle": "Smarter Planning with Agentic AI",
+    "description": "From data to decisions—smarter planning for modern software teams. Agentic AI streamlines autonomous agents to handle requirement gathering, draft timelines, and risk checks—while decision-makers focus on priorities and approvals.",
+    "image": "/images/ai_planning.jpg",
+    "tagline": "From scattered data inputs to seamless execution",
+    "sections": [
+      {
+        "id": "current-landscape",
+        "title": "The Current Landscape of Planning",
+        "content": "Agentic AI streamlines autonomous agents to handle requirement gathering, draft timelines, and risk checks—while decision-makers focus on priorities and approvals.",
+        "features": [
+          "Scattered inputs slow alignment across teams.",
+          "Agents manage requirement gathering, timelines, and risk checks.",
+          "Decision-makers stay focused on priorities and approvals."
+        ]
+      },
+      {
+        "id": "traditional-planning-fails",
+        "title": "Why Traditional Planning Fails",
+        "content": "Traditional planning is weighed down by fragmented inputs, shifting priorities, and delayed risk detection—slowing execution and driving costs higher.",
+        "challenges": [
+          "Scattered requirements across tools and teams.",
+          "Static timelines that fail when priorities shift.",
+          "Manual resource planning is prone to delays."
+        ]
+      },
+      {
+        "id": "agentic-way-forward",
+        "title": "The Agentic AI Way Forward",
+        "content": "Agentic AI unifies planning into one adaptive flow, using specialized agents that collaborate with decision-makers to keep strategies clear, flexible, and resilient.",
+        "features": [
+          "Centralized requirement collection and prioritization.",
+          "Real-time adjustments to timelines and resources.",
+          "Risk detection and mitigation at an early stage."
+        ]
+      },
+      {
+        "id": "why-planning-matters",
+        "title": "Why This Matters",
+        "content": "Agentic AI delivers faster alignment, adaptive execution, and cost efficiency—empowering modern software teams to plan with confidence.",
+        "benefits": [
+          "Accelerated decision-making with automated inputs.",
+          "Agility to adjust timelines and resources in real-time.",
+          "Optimized costs through early risk detection and resource planning.",
+          "Stronger collaboration between AI agents and human decision-makers."
+        ]
+      }
+    ],
+    "relatedUseCases": ["data-preparation", "agile-development", "automated-testing"]
+  },
+  "data-preparation": {
+    "id": "data-preparation",
+    "title": "AI Data Preparation",
+    "category": "Technology",
+    "summary": "Smarter data preparation empowers intelligent business",
+    "heroTitle": "Data Preparation",
+    "description": "Essential data preparation is the process of turning messy, scattered, and incomplete data into a clean, usable, and reliable format for analysis. Without it, companies face delays, compliance risks, and loss of valuable trends.",
+    "image": "/images/ai_data_preparation.jpg",
+    "tagline": "Smarter data preparation empowers intelligent business",
+    "sections": [
+      {
+        "id": "data-preparation-essential",
+        "title": "Essential",
+        "content": "Data preparation is the process of turning messy, scattered, and incomplete data into a clean, usable, and reliable format for analysis. Without it, companies face delays, compliance risks, and loss of valuable trends, as decisions get made on outdated or inaccurate information. AI-driven automation strengthens data preparation by detecting and correcting errors to maintain accuracy, making the entire flow and transformation of data visible for transparency, and preserving both past and present details so historical trends remain intact. Together, these practices ensure businesses work with clean, transparent, and timely data—forming a strong base for trustworthy analytics and confident decision-making."
+      },
+      {
+        "id": "data-pain-point",
+        "title": "Pain Point",
+        "content": "Companies often deal with messy, incomplete, and outdated data. With poor visibility, errors are harder to fix, compliance risks increase, decisions get delayed, and valuable trends are lost.",
+        "challenges": [
+          "Compliance risks increase without proper oversight.",
+          "Delays in updates slow down decision-making.",
+          "Missing history erases valuable long-term trends."
+        ]
+      },
+      {
+        "id": "smart-approach",
+        "title": "Smart Approach",
+        "content": "AI-driven automation continuously cleans, tracks, updates, and preserves data, making it accurate, timely, and trustworthy for decision-making.",
+        "features": [
+          "Detecting and fixing errors automatically to ensure accuracy.",
+          "Showing the complete flow and changes of data for better visibility.",
+          "Capturing updates instantly from source systems to keep data fresh.",
+          "Preserving both old and new details so historical insights are never lost."
+        ],
+        "additionalContent": "Together, these automated processes build a strong foundation for reliable analytics and confident decision-making."
+      },
+      {
+        "id": "data-benefits",
+        "title": "Benefits",
+        "content": "AI agents ensure data stays clean, accurate, and always up to date by fixing errors, tracking changes, and preserving history. This creates reliable insights and smarter decisions for businesses by:",
+        "benefits": [
+          "Continuously detects and corrects errors, ensuring reliable data for every decision.",
+          "Maintains both old and new data, enabling long-term trend analysis without losing context.",
+          "Automates repetitive tasks, cutting down manual work and speeding up decision-making.",
+          "Reduces risks by ensuring data practices meet governance and regulatory standards."
+        ]
+      }
+    ],
+    "relatedUseCases": ["smarter-planning", "agile-development", "automated-testing"]
+  },
+  "agile-development": {
+    "id": "agile-development",
+    "title": "AI Development Platform",
+    "category": "Technology",
+    "summary": "Where Business Logic Becomes Scalable Reality.",
+    "heroTitle": "Transforming Software Development with Agentic AI",
+    "description": "Built with Agentic AI to transform how businesses build and scale software. Our platform removes the complexity of traditional development by separating business logic from code.",
+    "image": "/images/ai_developement.jpg",
+    "tagline": "Where Business Logic Becomes Scalable Reality",
+    "sections": [
+      {
+        "id": "development-overview",
+        "title": "Development Overview",
+        "content": "Built with Agentic AI to transform how businesses build and scale software. Our platform removes the complexity of traditional development by separating business logic from code. No more spending months rewriting stacks, debugging syntax, or maintaining fragile systems. With our LCNC + Agentic AI development engine, teams can create, migrate, and scale applications in record time."
+      },
+      {
+        "id": "one-solution",
+        "title": "One solution, endless possibilities.",
+        "content": "With our platform, you build smarter by designing products around business rules instead of hard-coding. Migration becomes effortless as your logic moves seamlessly from one tech stack to another without the need for rewriting. Intelligent agents automate at scale, handling workflows, updates, and maintenance with ease. And because our AI adapts your logic to any codebase, your applications remain future-proof, never locked into a single stack."
+      },
+      {
+        "id": "adaptive-design",
+        "title": "Adaptive by design.",
+        "content": "Because our agents reason in real time, they adapt to changes in code, stack, or UI without breaking. Forget about brittle scripts, costly rewrites, and endless maintenance cycles. Just define the logic — our AI ensures it runs everywhere, always optimized."
+      },
+      {
+        "id": "intelligent-optimized",
+        "title": "Intelligent. Optimized. Scalable.",
+        "content": "Our system is powered by next-generation AI models, purpose-built for LCNC use cases to deliver the perfect balance of speed, cost, and accuracy. In just a few months, teams have shipped applications up to five times faster, reduced development costs by 40 percent, and cut migration effort by more than 70 percent — proving that building with business logic and AI is not just smarter, but radically more efficient."
+      },
+      {
+        "id": "goodbye-traditional",
+        "title": "Say goodbye to traditional coding.",
+        "content": "Say hello to logic-driven development."
+      }
+    ],
+    "relatedUseCases": ["automated-testing", "deployment-automation", "data-preparation"]
+  },
+  "automated-testing": {
+    "id": "automated-testing",
+    "title": "AI Test Automation",
+    "category": "Technology",
+    "summary": "Transforming Software Testing into an Intelligent, Self-Adaptive Process",
+    "heroTitle": "AI–powered Test Automation",
+    "description": "Our Agentic AI–powered Test Automation Platform makes testing simple, fast, and intelligent. It supports web, mobile, and API apps with no-code, low-code, and pro-code flexibility.",
+    "image": "/images/ai_testing.jpg",
+    "tagline": "Transforming Software Testing into an Intelligent, Self-Adaptive Process",
+    "sections": [
+      {
+        "id": "testing-big-picture",
+        "title": "Big Picture",
+        "content": "Our Agentic AI–powered Test Automation Platform makes testing simple, fast, and intelligent. It supports web, mobile, and API apps with no-code, low-code, and pro-code flexibility so anyone can create and run tests easily."
+      },
+      {
+        "id": "testing-pain-points",
+        "title": "Pain Points",
+        "content": "Traditional testing is slow, costly, and fragile. Scripts break often, need constant updates, and require expert knowledge—causing delays and limited coverage."
+      },
+      {
+        "id": "testing-approach",
+        "title": "Our Approach",
+        "content": "Our platform uses Agentic AI to auto-heal broken tests, convert plain English into test cases, and predict critical scenarios. With smart reporting and CI/CD integration, your team releases faster, with lower costs and higher confidence.",
+        "features": [
+          "Smart App Analysis – Scans your application's UI and code to understand its structure and flow.",
+          "Domain Intelligence – Detects whether your app is e-commerce, finance, healthcare, or other domains, then suggests the right test scenarios.",
+          "Automated Test Creation – Transforms app insights and plain English instructions into ready-to-execute test cases.",
+          "Self-Healing Tests – Automatically updates test scripts when your app changes, reducing maintenance efforts.",
+          "Seamless Execution & Reporting – Runs tests across platforms, integrates with CI/CD pipelines, and delivers results in easy-to-read dashboards."
+        ],
+        "additionalContent": "With these innovations, our platform aims to move from reactive testing to proactive quality assurance."
+      },
+      {
+        "id": "testing-outcomes",
+        "title": "Outcomes",
+        "content": "Our platform turns testing from a blocker into a driver of innovation.",
+        "benefits": [
+          "No more brittle scripts or endless maintenance cycles.",
+          "Both technical and non-technical users can create and run tests with ease.",
+          "Seamless CI/CD integration ensures faster, smoother releases.",
+          "Businesses cut costs, reduce risks, and improve test coverage."
+        ],
+        "additionalContent": "The result: reliable, high-quality software delivered at speed."
+      }
+    ],
+    "relatedUseCases": ["agile-development", "deployment-automation", "smarter-planning"]
+  },
+  "deployment-automation": {
+    "id": "deployment-automation",
+    "title": "AI Deployment Automation",
+    "category": "Technology",
+    "summary": "From manual pipelines to self-driving deployments",
+    "heroTitle": "Agentic AI-Driven Autonomous Deployment",
+    "description": "Software deployment has become a cornerstone of modern engineering, shaping the pace and reliability of digital transformation. Deployment now requires an intelligent, adaptive approach.",
+    "image": "/images/ai_deployment.jpg",
+    "tagline": "From manual pipelines to self-driving deployments",
+    "sections": [
+      {
+        "id": "where-we-stand",
+        "title": "Where We Stand",
+        "content": "Software deployment has become a cornerstone of modern engineering, shaping the pace and reliability of digital transformation. With the growing demand for faster, safer, and more frequent releases, traditional pipelines are proving insufficient. Deployment now requires an intelligent, adaptive approach that ensures seamless delivery across complex and evolving environments."
+      },
+      {
+        "id": "whats-holding-back",
+        "title": "What's Holding Back",
+        "content": "Conventional deployment practices are rigid and heavily manual, leading to critical challenges:",
+        "challenges": [
+          "Limited adaptability to dynamic infrastructure and requirements",
+          "Manual oversight and bottlenecks that delay release cycles",
+          "Inconsistent reliability across multi-cloud and hybrid environments",
+          "Increased risk of failures due to lack of real-time intelligence"
+        ],
+        "additionalContent": "Such constraints hinder scalability, slow innovation, and reduce the resilience needed in today's digital ecosystem."
+      },
+      {
+        "id": "intelligence-meets-delivery",
+        "title": "Where Intelligence Meets Delivery",
+        "content": "Agentic AI–driven Autonomous Deployment Platform to transform how releases are executed. The approach is rooted in building deployment intelligence that self-directs actions across environments with adaptive precision.",
+        "features": [
+          "Parent AI Agent acting as the orchestrator, autonomously planning and validating deployments.",
+          "Specialized Child Agents executing focused deployment tasks such as canary rollouts, blue/green strategies, anomaly detection, and automated rollback.",
+          "Multi-layered modular architecture designed for scalability, high accuracy, minimal hallucinations, and continuous optimization.",
+          "Autonomous decision-making loop that learns from past releases to refine strategies and ensure seamless delivery."
+        ],
+        "additionalContent": "The architecture allows deployments to go beyond static execution—enabling real-time validation, adaptive rollouts, and consistent delivery across multi-cloud and hybrid environments."
+      },
+      {
+        "id": "value-delivered",
+        "title": "The Value Delivered",
+        "content": "The introduction of Agentic AI in deployment establishes a new benchmark for release automation. The system ensures:",
+        "benefits": [
+          "Zero-touch deployments with intelligent orchestration from code to production.",
+          "Autonomous rollbacks and anomaly handling ensure maximum reliability.",
+          "Accelerated release velocity with continuous optimization for every cycle.",
+          "Consistent delivery at scale, transforming deployment into a self-driving process."
+        ],
+        "additionalContent": "This paradigm unlocks the future of software deployment, where releases are faster, safer, and fully autonomous—empowering organizations to innovate without bottlenecks."
+      }
+    ],
+    "relatedUseCases": ["automated-testing", "agile-development", "data-preparation"]
+  },
+  "salesforce-ai-agents": {
+    "id": "salesforce-ai-agents",
+    "title": "AI-Powered Victory: Supercharge Your Business with Salesforce AI Agents!",
+    "category": "Technology",
+    "summary": "Accelerate Revenue. Strengthen Customer Relationships. Scale Without Limits.",
+    "heroTitle": "AI Agents at the Core of Business Transformation",
+    "description": "AI Agents are redefining how Salesforce operates—not as passive tools, but as active digital co-pilots that drive execution, intelligence, and growth. These agents automate repetitive tasks, orchestrate workflows across systems, and surface real-time insights, enabling businesses to move faster, smarter, and at scale.",
+    "image": "/images/ai_victory.jpg",
+    "tagline": "Accelerate Revenue. Strengthen Customer Relationships. Scale Without Limits.",
+    "sections": [
+      {
+        "id": "business-challenges",
+        "title": "The Business Challenges AI Agents Eliminate",
+        "content": "Traditional Salesforce processes, even in powerful organizations, face systemic obstacles:",
+        "challenges": [
+          "Repetitive Manual Processes slowing sales velocity with data entry, routing, and approvals.",
+          "Disconnected Systems that fragment data across CRM, ERP, and customer platforms.",
+          "Lagging Responses that frustrate prospects and reduce conversion potential.",
+          "Uncaptured Revenue from missed upsell and cross-sell opportunities.",
+          "Scaling Limitations as growing volumes overwhelm human bandwidth."
+        ]
+      },
+      {
+        "id": "agentic-automation",
+        "title": "Agentic Automation and Intelligence",
+        "content": "AI Agents embedded in Salesforce transform execution from reactive to proactive:",
+        "features": [
+          "Workflow Automation – Agents execute repetitive tasks instantly, from lead assignments to account updates.",
+          "Orchestration Across Systems – They synchronize Salesforce with ERP, CRM, and support platforms for seamless operations.",
+          "Real-Time Decisioning – Agents analyze data streams to prioritize leads, accounts, and cases for maximum impact.",
+          "Customer Engagement Intelligence – They personalize interactions, delivering faster and more relevant responses.",
+          "Scalable Execution – Agents adapt to growing volumes without adding overhead, ensuring resilience and continuity."
+        ]
+      },
+      {
+        "id": "business-outcomes",
+        "title": "Business Outcomes at Enterprise Scale",
+        "content": "Faster Delivery Cycles – Agents shorten sales and service timelines through instant automation.",
+        "benefits": [
+          "Revenue Acceleration – Intelligent prioritization and personalization maximize conversions and deal size.",
+          "Efficiency Gains – Automating up to 70% of repetitive tasks reduces costs and frees human talent for strategy.",
+          "Customer Loyalty – Personalized, real-time engagement fosters trust and long-term retention.",
+          "Enterprise Scalability – Agent-driven automation ensures Salesforce scales with business needs without bottlenecks.",
+          "Strategic Advantage – Predictive intelligence equips leaders with foresight for proactive decisions."
+        ]
+      },
+      {
+        "id": "growth-multipliers",
+        "title": "AI Agents as Growth Multipliers",
+        "content": "Salesforce is the foundation—but AI Agents are the force multipliers that elevate it from a CRM into a strategic growth engine. By automating execution, orchestrating systems, and powering intelligent engagement, these agents accelerate delivery, unlock new revenue streams, and ensure organizations operate at enterprise speed and precision. AI Agents are not support tools—they are business accelerators."
+      }
+    ],
+    "relatedUseCases": ["smarter-planning", "data-preparation", "deployment-automation"]
+  },
+  "jira-ai-automation": {
+    "id": "jira-ai-automation",
+    "title": "Automating Jira, Accelerating Product Delivery",
+    "category": "Technology",
+    "summary": "From Backlog to Delivery — Faster, Smarter, Seamless.",
+    "heroTitle": "Jira AI Agents Transform Project Management",
+    "description": "Jira AI Agents transform traditional project management into a high-performance, automated ecosystem. By embedding intelligence into workflows, they streamline execution, eliminate inefficiencies, and empower teams to focus on innovation and business impact.",
+    "image": "/images/ai_jira.png",
+    "tagline": "From Backlog to Delivery — Faster, Smarter, Seamless.",
+    "sections": [
+      {
+        "id": "challenges",
+        "title": "Challenges Slowing Down Delivery",
+        "content": "Project delays are often the result of manual steps, poor prioritization, and disconnected systems.",
+        "challenges": [
+          "Delayed Project Kickoff – Manual issue creation and assignments waste time and slow down project initiation.",
+          "Execution Bottlenecks – Status updates, sub-task creation, and approval routing rely on human effort, creating bottlenecks.",
+          "Fragmented Workflows – Disconnected systems cause misalignment, handoff delays, and rework.",
+          "Poor Task Prioritization – Missed deadlines and delayed delivery of high-value features.",
+          "Slow Reporting Cycles – Manual dashboards and reporting delay insights and decisions.",
+          "Cluttered Boards – Inactive or unresolved issues crowd boards, diverting focus from high-priority work.",
+          "Reactive Collaboration – Missed critical updates and slow resolutions.",
+          "Inefficient Scaling – Manual processes cannot keep pace as projects grow."
+        ]
+      },
+      {
+        "id": "automation-benefits",
+        "title": "Automation That Accelerates Execution",
+        "content": "Jira AI Agents embed automation at each workflow stage and integrate with surrounding tools.",
+        "features": [
+          "Faster Project Kickoff – Automated issue creation and intelligent assignments.",
+          "Streamlined Execution – AI-driven status updates, sub-task generation, and approval workflows.",
+          "Integrated Delivery Pipelines – Orchestration and sync with GitHub, Confluence, CI/CD, CRM, and ERP.",
+          "Smart Prioritization – AI analyzes urgency and dependencies to fast-track critical tasks.",
+          "Proactive Insights – Real-time reporting and dashboards for instant visibility.",
+          "Eliminating Waste – Automated cleanup of stale issues and lifecycle management.",
+          "Always-On Collaboration – Tailored notifications and escalations keep teams aligned."
+        ]
+      },
+      {
+        "id": "business-impact",
+        "title": "Driving Faster Delivery and Business Growth",
+        "content": "Agentic AI accelerates time-to-market, driving cost savings and data-driven decision making.",
+        "benefits": [
+          "Accelerated Time-to-Market – Products and features reach customers faster.",
+          "Operational Efficiency at Scale – Frees teams for strategic priorities.",
+          "Cost Optimization – Lower overhead and fewer errors.",
+          "Data-Driven Decision Making – Real-time insights for rapid business decisions.",
+          "Seamless Team Alignment – Unified workflows and automated communication.",
+          "Improved Quality and Accuracy – Minimizes human error and rework.",
+          "Enterprise-Grade Scalability – Supports large-scale product portfolios.",
+          "Enhanced Customer Value – Faster, higher-quality product delivery."
+        ],
+        "additionalContent": "With Agentic AI at its core, Jira Automation evolves from simple workflows into an intelligent delivery engine."
+      }
+    ],
+    "relatedUseCases": ["agile-development", "automated-testing", "smarter-planning"]
+  },
+  "servicenow-ai-agents": {
+    "id": "servicenow-ai-agents",
+    "title": "Driving Business Value with Intelligent ServiceNow Agents",
+    "category": "Technology",
+    "summary": "Intelligent ServiceNow Agents for Faster, Smarter IT Support",
+    "heroTitle": "ServiceNow AI: ITSM Excellence Unlocked",
+    "description": "Deploying intelligent automation agents within ServiceNow transforms IT support into a proactive, high-speed function, unlocking efficiency, customer satisfaction, and cost savings.",
+    "image": "/images/ai_driving.jpg",
+    "tagline": "Intelligent ServiceNow Agents for Faster, Smarter IT Support",
+    "sections": [
+      {
+        "id": "business-challenge",
+        "title": "Business Challenge",
+        "content": "Businesses today face rapidly increasing user demands and complexity in IT operations.",
+        "challenges": [
+          "Escalating Volumes: Higher support query volumes overwhelm teams.",
+          "Inconsistency and Delays: Manual processes cause errors and response bottlenecks.",
+          "Resource Constraints: Skilled IT staff are trapped by repetitive triage.",
+          "Visibility and Compliance Gaps: Manual ticketing reduces transparency."
+        ]
+      },
+      {
+        "id": "the-automation-solution",
+        "title": "The Automation Solution",
+        "content": "Intelligent ServiceNow agents automate workflow from intake to resolution.",
+        "features": [
+          "Scheduler & Mail Fetcher Agents: Instantly capture and queue support requests.",
+          "Classifier & Summary Agents: Filter out noise and summarize actionable issues.",
+          "Category Extractor & ServiceNow Agents: Route, prioritize, and format tickets automatically.",
+          "Notification & Tracker Agents: Keep all stakeholders informed and ensure timely resolution."
+        ]
+      },
+      {
+        "id": "benefits-impact",
+        "title": "Business Benefits & Impact",
+        "content": "Automation unlocks operational efficiency, cost savings, and a better experience.",
+        "benefits": [
+          "Operational Excellence & Cost Savings: Up to 70% manual effort reduction and fewer errors.",
+          "Enhanced Customer & Employee Experience: Faster and always-on support, clearer communication.",
+          "Insight and Accountability: Real-time tracking, improved reporting, and data-driven improvements.",
+          "Agility and Innovation: Easily scale, adapt workflows, and redeploy skilled staff to strategic projects."
+        ]
+      },
+      {
+        "id": "implementation-considerations",
+        "title": "Implementation Considerations for Business Leaders",
+        "content": "Success with ServiceNow agents requires clear KPIs, open communication, continuous improvement, and compliance.",
+        "features": [
+          "Align to business KPIs (e.g., ticket resolution time, SLA compliance, satisfaction).",
+          "Provide change management and training to stakeholders.",
+          "Leverage data for ongoing refinement.",
+          "Ensure policies and regulatory standards are met."
+        ]
+      },
+      {
+        "id": "real-world-scenario",
+        "title": "Real-World Scenario",
+        "content": "Global rollout of ServiceNow agents led to:",
+        "benefits": [
+          "50%+ faster average ticket resolution.",
+          "30% more IT staff time on strategic projects.",
+          "25% improvement in user satisfaction from clearer communication."
+        ]
+      },
+      {
+        "id": "agents-overview",
+        "title": "Our Agents",
+        "content": "ServiceNow AI strengthens support with these purpose-built automation agents.",
+        "features": [
+          "Scheduler Agent: Triggers ServiceNow workflows at intervals.",
+          "Mail Fetcher Agent: Retrieves all new support emails.",
+          "Classifier Agent: Distinguishes support requests from noise.",
+          "Summary Agent: Distills incoming messages into actionable ticket summaries.",
+          "Category Extractor Agent: Uses NLP to identify issue category, impacts, and urgency.",
+          "ServiceNow Agent: Creates, updates, and manages ServiceNow incidents.",
+          "Notification Agent: Sends structured updates to end-users.",
+          "Tracker Agent: Tracks ticket status, triggers escalation/closure, and maintains real-time visibility."
+        ],
+        "additionalContent": "These agents deliver operational excellence, resilience, and a data-rich foundation for ongoing service improvement."
+      }
+    ],
+    "relatedUseCases": ["data-preparation", "deployment-automation", "agile-development"]
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "title": "Development:",
+    "subtitle": "Transforming Software Development with Agentic AI",
+    "introduction": "Built with Agentic AI to transform how businesses build and scale software. Our platform removes the complexity of traditional development by separating business logic from code. No more spending months rewriting stacks, debugging syntax, or maintaining fragile systems. With our LCNC + Agentic AI development engine, teams can create, migrate, and scale applications in record time.",
+    "sections": [
+      {
+        "heading": "One solution, endless possibilities.",
+        "content": "With our platform, you build smarter by designing products around business rules instead of hard-coding. Migration becomes effortless as your logic moves seamlessly from one tech stack to another without the need for rewriting. Intelligent agents automate at scale, handling workflows, updates, and maintenance with ease. And because our AI adapts your logic to any codebase, your applications remain future-proof, never locked into a single stack."
+      },
+      {
+        "heading": "Adaptive by design.",
+        "content": "Because our agents reason in real time, they adapt to changes in code, stack, or UI without breaking. Forget about brittle scripts, costly rewrites, and endless maintenance cycles. Just define the logic — our AI ensures it runs everywhere, always optimized."
+      },
+      {
+        "heading": "Intelligent. Optimized. Scalable.",
+        "content": "Our system is powered by next-generation AI models, purpose-built for LCNC use cases to deliver the perfect balance of speed, cost, and accuracy. In just a few months, teams have shipped applications up to five times faster, reduced development costs by 40 percent, and cut migration effort by more than 70 percent — proving that building with business logic and AI is not just smarter, but radically more efficient."
+      }
+    ],
+    "closing": {
+      "statement1": "Say goodbye to traditional coding.",
+      "statement2": "Say hello to logic-driven development."
+    },
+    "tagline": "Where Business Logic Becomes Scalable Reality."
+  }
+  

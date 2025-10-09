@@ -1,0 +1,395 @@
+@import "tailwindcss";
+
+/* Blog content styling */
+.prose {
+  color: #374151;
+  line-height: 1.75;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  color: #111827;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+}
+
+.prose h4 {
+  font-size: 1.25rem;
+}
+
+.prose p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.prose .blog-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(calc(var(--angle) * 1deg))
+      translateX(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) * 1deg + 360deg))
+      translateX(calc(var(--radius) * 1px))
+      rotate(calc((var(--angle) * -1deg) - 360deg));
+  }
+}
+
+.animate-orbit {
+  animation: orbit calc(var(--duration) * 1s) linear infinite;
+}
+
+/* Animation utilities for navbar */
+@keyframes slide-in-from-top-2 {
+  from {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-0 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.slide-in-from-top-2 {
+  animation-name: slide-in-from-top-2;
+}
+
+.fade-in-0 {
+  animation-name: fade-in-0;
+}
+
+.duration-200 {
+  animation-duration: 200ms;
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+.ease-out {
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+/* Heading Styles - All use Manrope font */
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* H1 - Hero titles */
+h1 {
+  font-weight: 800; /* Extra-Bold */
+  line-height: auto;
+  font-size: 32px; /* Mobile ≤767px */
+}
+
+/* H2 - Section headings */
+h2 {
+  font-weight: 500; /* Medium */
+  line-height: auto;
+  font-size: 28px; /* Mobile ≤767px */
+}
+
+/* H3 - Subsections */
+h3 {
+  font-weight: 700; /* Bold */
+  line-height: auto;
+  font-size: 26px; /* Mobile ≤767px */
+}
+
+/* H4 - Card titles */
+h4 {
+  font-weight: 600; /* Semi-Bold */
+  line-height: auto;
+  font-size: 24px; /* Mobile ≤767px */
+}
+
+/* H5 - Small headings */
+h5 {
+  font-weight: 500; /* Medium */
+  line-height: auto;
+  font-size: 18px; /* Mobile ≤767px */
+}
+
+/* H6 - Metadata */
+h6 {
+  font-weight: 500; /* Medium */
+  line-height: auto;
+  font-size: 16px; /* Mobile ≤767px */
+}
+
+/* H7 - Small metadata */
+h7 {
+  font-weight: 500; /* Medium */
+  line-height: auto;
+  font-size: 14px; /* Mobile ≤767px */
+}
+
+/* Body Text Styles - All use Inter font */
+p, body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Regular */
+  line-height: auto;
+  font-size: 14px; /* Mobile ≤767px */
+}
+
+/* Body Small Text */
+.text-small, small {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400; /* Regular */
+  line-height: auto;
+  font-size: 12px; /* Mobile ≤767px */
+}
+
+/* Caption/Labels */
+.caption, .label, label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500; /* Medium */
+  line-height: auto;
+  font-size: 11px; /* Mobile ≤767px */
+}
+
+/* Quote/Highlight */
+blockquote, .quote, .highlight {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600; /* Semi-Bold */
+  line-height: auto;
+  font-size: 16px; /* Mobile ≤767px */
+}
+
+/* Tablet Styles (768px - 1199px) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: auto;
+  }
+  
+  h2 {
+    font-size: 36px;
+    line-height: auto;
+  }
+  
+  h3 {
+    font-size: 30px;
+    line-height: auto;
+  }
+  
+  h4 {
+    font-size: 24px;
+    line-height: auto;
+  }
+  
+  h5 {
+    font-size: 20px;
+    line-height: auto;
+  }
+  
+  h6 {
+    font-size: 17px;
+    line-height: auto;
+  }
+  
+  h7 {
+    font-size: 15px;
+    line-height: auto;
+  }
+  
+  p, body {
+    font-size: 15px;
+    line-height: auto;
+  }
+  
+  .text-small, small {
+    font-size: 13px;
+    line-height: auto;
+  }
+  
+  .caption, .label, label {
+    font-size: 12px;
+    line-height: auto;
+  }
+  
+  blockquote, .quote, .highlight {
+    font-size: 18px;
+    line-height: auto;
+  }
+}
+
+/* Desktop Styles (≥1200px) */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 48px;
+    line-height: auto;
+  }
+  
+  h2 {
+    font-size: 40px;
+    line-height: auto;
+  }
+  
+  h3 {
+    font-size: 36px;
+    line-height: auto;
+  }
+  
+  h4 {
+    font-size: 28px;
+    line-height: auto;
+  }
+  
+  h5 {
+    font-size: 22px;
+    line-height: auto;
+  }
+  
+  h6 {
+    font-size: 18px;
+    line-height: auto;
+  }
+  
+  h7 {
+    font-size: 16px;
+    line-height: auto;
+  }
+  
+  p, body {
+    font-size: 16px;
+    line-height: 140%;
+  }
+  
+  .text-small, small {
+    font-size: 14px;
+    line-height: auto;
+  }
+  
+  .caption, .label, label {
+    font-size: 12px;
+    line-height: 118.7%;
+  }
+  
+  blockquote, .quote, .highlight {
+    font-size: 20px;
+    line-height: auto;
+  }
+}
+
+/* Utility Classes */
+.font-manrope {
+  font-family: 'Manrope', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Font Weight Utilities */
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Line Height Utilities */
+.leading-tight {
+  line-height: 120%;
+}
+
+.leading-snug {
+  line-height: 125%;
+}
+
+.leading-normal {
+  line-height: 130%;
+}
+
+.leading-relaxed {
+  line-height: 135%;
+}
+
+.leading-loose {
+  line-height: 140%;
+}
+
+.leading-extra-loose {
+  line-height: 150%;
+}

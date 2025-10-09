@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Global Colors */
+    --global-bg-1: #064ee391;
+    --global-bg-2: #a4b6ef91;
+    --global-bg-3: #c5ede0;
+    --global-bg-4: #e6edfc;
+    --global-bg-5: #edebeb;
+    --global-bg-6: #f2f4fd;
+    --global-bg-7: #ffffff;
+    --global-text-1: #000000;
+    --global-text-2: #00000068;
+    --global-text-3: #000000b2;
+    --global-text-4: #040404;
+    --global-text-5: #064ee3;
+    --global-text-6: #1f235b;
+    --global-text-7: #242424;
+    --global-text-8: #242424ad;
+    --global-text-9: #303030;
+    --global-text-10: #3e57da;
+    --global-text-11: #848484;
+    --global-text-12: #ffffff;
+
+    /* Button Colors */
+    --button-bg-1: #040404;
+    --button-text-1: #ffffff;
+
+    /* Header Colors */
+    --header-bg-1: #ffffff8e;
+
+    /* Footer Colors */
+    --footer-bg-1: #011236;
+    --footer-bg-2: #e6eaf433;
+    --footer-text-1: #8098f9;
+  }
+}
+
+@layer utilities {
+  /* Global */
+  .bg-global-1 {
+    background-color: var(--global-bg-1);
+  }
+  .bg-global-2 {
+    background-color: var(--global-bg-2);
+  }
+  .bg-global-3 {
+    background-color: var(--global-bg-3);
+  }
+  .bg-global-4 {
+    background-color: var(--global-bg-4);
+  }
+  .bg-global-5 {
+    background-color: var(--global-bg-5);
+  }
+  .bg-global-6 {
+    background-color: var(--global-bg-6);
+  }
+  .bg-global-7 {
+    background-color: var(--global-bg-7);
+  }
+  .text-global-1 {
+    color: var(--global-text-1);
+  }
+  .text-global-2 {
+    color: var(--global-text-2);
+  }
+  .text-global-3 {
+    color: var(--global-text-3);
+  }
+  .text-global-4 {
+    color: var(--global-text-4);
+  }
+  .text-global-5 {
+    color: var(--global-text-5);
+  }
+  .text-global-6 {
+    color: var(--global-text-6);
+  }
+  .text-global-7 {
+    color: var(--global-text-7);
+  }
+  .text-global-8 {
+    color: var(--global-text-8);
+  }
+  .text-global-9 {
+    color: var(--global-text-9);
+  }
+  .text-global-10 {
+    color: var(--global-text-10);
+  }
+  .text-global-11 {
+    color: var(--global-text-11);
+  }
+  .text-global-12 {
+    color: var(--global-text-12);
+  }
+
+  /* Button */
+  .bg-button-1 {
+    background-color: var(--button-bg-1);
+  }
+  .text-button-1 {
+    color: var(--button-text-1);
+  }
+
+  /* Header */
+  .bg-header-1 {
+    background-color: var(--header-bg-1);
+  }
+
+  /* Footer */
+  .bg-footer-1 {
+    background-color: var(--footer-bg-1);
+  }
+  .bg-footer-2 {
+    background-color: var(--footer-bg-2);
+  }
+  .text-footer-1 {
+    color: var(--footer-text-1);
+  }
+
+  /* 3D Perspective Effects */
+  .perspective-distant {
+    perspective: 1000px;
+  }
+  
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+}

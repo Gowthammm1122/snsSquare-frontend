@@ -1,0 +1,320 @@
+{
+  "foundationAgents": [
+    {
+      "id": "data-management",
+      "title": "Data Management",
+      "description": "Comprehensive data management and organization solutions",
+      "icon": "/images/agents/database-management 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path" :"/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "multilanguage-chatbot",
+      "title": "Multilingual Chatbot",
+      "description": "Ensure regulatory compliance and maintain security standards",
+      "icon": "/images/agents/regulatory 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "document-summarizer-agent",
+      "title": "Business Intelligence & Analysis",
+      "description": "Advanced analytics and business intelligence solutions",
+      "icon": "/images/agents/online-analytical 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "trip-planning-agent",
+      "title": "Communication & Assistance",
+      "description": "Intelligent communication and virtual assistance",
+      "icon": "/images/agents/robot 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/trip-planning-agent"
+    },
+    {
+      "id": "logic-validation-agent",
+      "title": "Logic Validation Agent",
+      "description": "Advanced research and analysis with comprehensive data gathering",
+      "icon": "/images/agents/writing 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/logic-validation-agent"
+    },
+    {
+      "id": "idea-refinement-agent",
+      "title": "Idea Refiner",
+      "description": "Smart document processing and knowledge base management",
+      "icon": "/images/agents/folders 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "image-generation-agent",
+      "title": "Image Generator",
+      "description": "Social media management and content creation",
+      "icon": "/images/agents/social-media 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "entity-extraction-agent",
+      "title": "Entity Extractor",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "automated-linter-agent",
+      "title": "Automated Linter",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+      {
+      "id": "testcase-generation-agent",
+      "title": "Testcase Generator",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+      {
+      "id": "data-generation-agent",
+      "title": "Data Generator",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "data-query-agent",
+      "title": "Data Query Agent",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "document-summarizer-agent",
+      "title": "Document Summarizer",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "healthcare-appoinment-classifier",
+      "title": "Healthcare Appointment Classifier",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },    
+    {
+      "id": "csv-to-excel-agent",
+      "title": "CSV to Excel Convertor",
+      "description": "Csv to excel conversion made easy",
+      "icon": "/images/agents/folders 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "trip-planning-agent",
+      "title": "Trip Planning Agent",
+      "description": "Intelligent communication and virtual assistance",
+      "icon": "/images/agents/robot 1.png",
+      "category": "Foundation Agents",
+      "featured": false,
+      "path": "/agent-playground/agent/{agentId}"
+    },
+    {
+      "id": "data-query-agent",
+      "title": "Data Query Agent",
+      "description": "Code analysis, debugging, and development assistance",
+      "icon": "/images/agents/optimizing 1.png",
+      "category": "Foundation Agents",
+      "featured": false
+    },
+    {
+      "id": "work-management",
+      "title": "Work Management",
+      "description": "Streamline workflows and productivity management",
+      "icon": "/images/agents/efficiency 1.png",
+      "category": "Foundation Agents",
+      "featured": false
+    },
+    {
+      "id": "developer-support",
+      "title": "Developer Support",
+      "description": "Code analysis, debugging, and development assistance",
+      "icon": "/images/agents/optimizing 1.png",
+      "category": "Foundation Agents",
+      "featured": false
+    }
+  ],
+  "industrySolutions": [
+    {
+      "id": "manufacturing",
+      "title": "Manufacturing",
+      "description": "Industrial automation and manufacturing optimization",
+      "icon": "/images/agents/factory 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "agriculture",
+      "title": "Agriculture",
+      "description": "Smart farming and agricultural management solutions",
+      "icon": "/images/agents/sprout 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "healthcare",
+      "title": "Healthcare",
+      "description": "Medical assistance and healthcare management",
+      "icon": "/images/agents/medical-check 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "legal",
+      "title": "Legal",
+      "description": "Legal research and document analysis",
+      "icon": "/images/agents/law 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "media-entertainment",
+      "title": "Media & Entertainment",
+      "description": "Content creation and entertainment industry solutions",
+      "icon": "/images/agents/background 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "retail",
+      "title": "Retail",
+      "description": "E-commerce and retail management solutions",
+      "icon": "/images/agents/shop-bag 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "real-estate",
+      "title": "Real Estate",
+      "description": "Property management and real estate analytics",
+      "icon": "/images/agents/building 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "human-resources",
+      "title": "Human Resources",
+      "description": "HR management and talent acquisition solutions",
+      "icon": "/images/agents/hr-manager (1) 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "fintech",
+      "title": "Fintech",
+      "description": "Financial technology and payment solutions",
+      "icon": "/images/agents/budget 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    },
+    {
+      "id": "banking",
+      "title": "Banking",
+      "description": "Banking operations and financial services",
+      "icon": "/images/agents/bank 1.png",
+      "category": "Industry Solutions",
+      "featured": false
+    }
+  ],
+  "customerSolutions": [
+    {
+      "id": "personal-assistant",
+      "title": "Personal Assistant",
+      "description": "Your intelligent personal AI companion",
+      "icon": "/images/img_background_blue_800.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "smart-home",
+      "title": "Smart Home Control",
+      "description": "Intelligent home automation and control",
+      "icon": "/images/img_frame_blue_800.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "learning-companion",
+      "title": "Learning Companion",
+      "description": "Personalized learning and educational support",
+      "icon": "/images/Frame_2.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "health-tracker",
+      "title": "Health Tracker",
+      "description": "Personal health monitoring and wellness guidance",
+      "icon": "/images/img_frame.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "entertainment-curator",
+      "title": "Entertainment Curator",
+      "description": "Personalized entertainment recommendations",
+      "icon": "/images/Frame_3.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "shopping-advisor",
+      "title": "Shopping Advisor",
+      "description": "Smart shopping assistance and recommendations",
+      "icon": "/images/Frame_4.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "travel-planner",
+      "title": "Travel Planner",
+      "description": "Intelligent travel planning and booking",
+      "icon": "/images/Frame.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    },
+    {
+      "id": "finance-manager",
+      "title": "Finance Manager",
+      "description": "Personal finance management and budgeting",
+      "icon": "/images/img_frame_60x60.svg",
+      "category": "Customer Solutions",
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Testing: AI–powered Test Automation",
+    "sections": {
+      "big_picture": "Our Agentic AI–powered Test Automation Platform makes testing simple, fast, and intelligent. It supports web, mobile, and API apps with no-code, low-code, and pro-code flexibility so anyone can create and run tests easily.",
+      "pain_points": "Traditional testing is slow, costly, and fragile. Scripts break often, need constant updates, and require expert knowledge—causing delays and limited coverage.",
+      "our_approach": {
+        "description": "Our platform uses Agentic AI to auto-heal broken tests, convert plain English into test cases, and predict critical scenarios. With smart reporting and CI/CD integration, your team releases faster, with lower costs and higher confidence.",
+        "features": [
+          "Smart App Analysis – Scans your application's UI and code to understand its structure and flow.",
+          "Domain Intelligence – Detects whether your app is e-commerce, finance, healthcare, or other domains, then suggests the right test scenarios.",
+          "Automated Test Creation – Transforms app insights and plain English instructions into ready-to-execute test cases.",
+          "Self-Healing Tests – Automatically updates test scripts when your app changes, reducing maintenance efforts.",
+          "Seamless Execution & Reporting – Runs tests across platforms, integrates with CI/CD pipelines, and delivers results in easy-to-read dashboards."
+        ],
+        "goal": "With these innovations, our platform aims to move from reactive testing to proactive quality assurance."
+      },
+      "outcomes": {
+        "description": "Our platform turns testing from a blocker into a driver of innovation.",
+        "benefits": [
+          "No more brittle scripts or endless maintenance cycles.",
+          "Both technical and non-technical users can create and run tests with ease.",
+          "Seamless CI/CD integration ensures faster, smoother releases.",
+          "Businesses cut costs, reduce risks, and improve test coverage."
+        ],
+        "result": "The result: reliable, high-quality software delivered at speed."
+      }
+    },
+    "tagline": "Transforming Software Testing into an Intelligent, Self-Adaptive Process"
+  }

@@ -1,0 +1,37 @@
+{
+    "title": "Automating Jira, Accelerating Product Delivery",
+    "tagline": "From Backlog to Delivery — Faster, Smarter, Seamless.",
+    "overview": "Jira AI Agents transform traditional project management into a high-performance, automated ecosystem. By embedding intelligence into workflows, they streamline execution, eliminate inefficiencies, and empower teams to focus on innovation and business impact. From issue creation to real-time reporting, these agents accelerate every stage of product management.",
+    "sections": {
+      "challenges_slowing_down_delivery": [
+        "Delayed Project Kickoff – Manual issue creation and assignments waste time and slow down project initiation.",
+        "Execution Bottlenecks – Status updates, sub-task creation, and approval routing rely on human effort, creating bottlenecks that extend cycle times.",
+        "Fragmented Workflows – Disconnected systems (GitHub, Confluence, CI/CD, CRM, ERP) cause misalignment, handoff delays, and rework.",
+        "Poor Task Prioritization – Teams often struggle to identify critical issues in time, causing missed deadlines and delayed delivery of high-value features.",
+        "Slow Reporting Cycles – Manual dashboards and reporting consume hours, delaying insights and decision-making.",
+        "Cluttered Boards – Inactive or unresolved issues crowd boards, diverting attention from high-priority work.",
+        "Reactive Collaboration – Notifications and escalations are inconsistent, causing teams to miss critical updates and slowing down resolutions.",
+        "Inefficient Scaling – As projects grow, manual processes cannot keep pace, leading to delivery lags and rising costs."
+      ],
+      "automation_that_accelerates_execution": [
+        "Faster Project Kickoff – Automated issue creation and intelligent assignment eliminate manual delays, enabling projects to start instantly.",
+        "Streamlined Execution – AI-driven status updates, sub-task generation, and approval workflows cut cycle times and keep work moving without bottlenecks.",
+        "Integrated Delivery Pipelines – Orchestration and sync with GitHub, Confluence, CI/CD, CRM, and ERP ensure end-to-end visibility and seamless handoffs.",
+        "Smart Prioritization – AI analyzes urgency and dependencies to fast-track critical tasks, ensuring timely delivery of high-value outcomes.",
+        "Proactive Insights – Real-time reporting and dashboards provide instant visibility, accelerating decisions and keeping delivery on track.",
+        "Eliminating Waste – Automated cleanup of stale issues and lifecycle management ensures focus only on active, value-driving work.",
+        "Always-On Collaboration – Tailored notifications and escalations keep teams aligned, reducing response time and accelerating resolution."
+      ],
+      "driving_faster_delivery_and_business_growth": [
+        "Accelerated Time-to-Market – Products and features reach customers faster, strengthening competitive advantage.",
+        "Operational Efficiency at Scale – Reduced manual effort frees teams to focus on strategic priorities instead of repetitive tasks.",
+        "Cost Optimization – Lower overhead and fewer errors translate into direct savings and improved margins.",
+        "Data-Driven Decision Making – Real-time insights empower leaders to make faster, smarter business decisions.",
+        "Seamless Team Alignment – Unified workflows and automated communication eliminate silos and misalignment.",
+        "Improved Quality and Accuracy – Automated, standardized processes minimize human error and rework.",
+        "Enterprise-Grade Scalability – Easily supports complex, large-scale product portfolios without added complexity.",
+        "Enhanced Customer Value – Faster delivery of reliable, high-quality products directly improves customer satisfaction and loyalty."
+      ]
+    },
+    "conclusion": "With Agentic AI at its core, Jira Automation evolves beyond simple workflows into an intelligent delivery engine. These AI-powered agents anticipate needs, eliminate manual bottlenecks, and orchestrate end-to-end processes—ensuring faster product delivery, reduced costs, and data-driven decisions at scale. The result: product teams innovate without friction, leaders gain real-time clarity, and businesses accelerate growth with confidence."
+  }
