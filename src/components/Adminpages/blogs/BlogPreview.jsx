@@ -103,7 +103,7 @@ const BlogPreview = () => {
             <span>•</span>
             <span>Status: {blogData.status}</span>
             <span>•</span>
-            <span>Preview mode</span>
+            <span>Preview Mode</span>
           </div>
           {blogData.tags && blogData.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
