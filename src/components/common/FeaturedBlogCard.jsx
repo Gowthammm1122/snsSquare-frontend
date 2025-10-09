@@ -56,7 +56,10 @@ const FeaturedBlogCard = ({
   <div className="pb-6">
     <h3 className="text-gray-900 leading-tight m-0">{title}</h3>
   </div>
-  <h5 className="text-gray-600 leading-relaxed m-0">{description}</h5>
+  <div 
+    className="text-gray-600 leading-relaxed m-0" 
+    dangerouslySetInnerHTML={{ __html: description }}
+  />
 </div>
 
 

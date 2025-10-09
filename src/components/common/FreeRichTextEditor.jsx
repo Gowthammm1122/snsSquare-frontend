@@ -151,6 +151,13 @@ const FreeRichTextEditor = forwardRef(({
     }
   }, [editor])
 
+  // Update editor content when content prop changes
+  useEffect(() => {
+    if (editor && content !== undefined && content !== editor.getHTML()) {
+      editor.commands.setContent(content, false)
+    }
+  }, [content, editor])
+
   // Expose editor instance through ref
   useImperativeHandle(ref, () => ({
     getEditor: () => editor,

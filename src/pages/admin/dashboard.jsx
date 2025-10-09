@@ -1,11 +1,12 @@
 import React from 'react'
-import AdminDashboard from '../../components/Adminpages/adminDashboard'
+import AdminDashboard from '../../components/Adminpages/AdminDashboard'
+import { BlogProvider } from '../../contexts/BlogContext'
 
 const dashboard = () => {
   return (
-    <div>
+    <BlogProvider>
       <AdminDashboard />
-    </div>
+    </BlogProvider>
   )
 }
 

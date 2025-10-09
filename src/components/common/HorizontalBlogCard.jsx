@@ -48,9 +48,10 @@ const HorizontalBlogCard = ({
             {title}
           </h5>
           </div>
-          <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1 line-clamp-2">
-            {description}
-          </p>
+          <div 
+            className="text-xs sm:text-sm text-gray-600 leading-relaxed mt-1 line-clamp-2" 
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
         
         {/* Blog metadata */}

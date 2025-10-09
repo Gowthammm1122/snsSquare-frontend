@@ -90,15 +90,6 @@ const BlogPreview = () => {
               <span>Preview Mode</span>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={handleEdit}
-              className="flex items-center space-x-2 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              <Edit size={16} />
-              <span>Edit</span>
-            </button>
-          </div>
         </div>
       </div>
 

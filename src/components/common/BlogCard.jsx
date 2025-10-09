@@ -56,9 +56,10 @@ const BlogCard = ({
           <h5 className="text-gray-900 mb-2 leading-tight">
             {title}
           </h5>
-          <p className="text-gray-600 leading-relaxed  mt-6 ">
-            {description}
-          </p>
+          <div 
+            className="text-gray-600 leading-relaxed mt-6" 
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
         
         {/* Blog metadata */}

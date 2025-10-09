@@ -15,7 +15,7 @@ const OverView = () => {
 
       <div className="max-w-7xl mx-auto p-6">
         {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <Link
             to="/admin/jobopenings/newJob"
             className="bg-white p-6 rounded-lg border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all group"
@@ -60,7 +60,7 @@ const OverView = () => {
               </div>
             </div>
           </Link>
-        </div>
+        </div> */}
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
