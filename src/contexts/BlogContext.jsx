@@ -42,7 +42,10 @@ export const BlogProvider = ({ children }) => {
   const fetchBlogs = async (params = {}) => {
     setLoading(true)
     try {
-      const response = await fetchAllBlogsAdmin(params)
+      // Set a high limit to fetch all blogs for frontend pagination
+      // This ensures we get all blogs instead of the default 20
+      const fetchParams = { limit: 1000, ...params }
+      const response = await fetchAllBlogsAdmin(fetchParams)
       if (response.success) {
         setBlogs(response.data)
       }

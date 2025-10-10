@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { 
   Search, 
@@ -15,7 +15,9 @@ import {
   CheckCircle,
   Clock,
   AlertCircle,
-  XCircle
+  XCircle,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react'
 import { useBlogContext } from '../../../contexts/BlogContext'
 
@@ -27,6 +29,8 @@ const AllBlogs = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [blogToDelete, setBlogToDelete] = useState(null)
   const [notification, setNotification] = useState({ show: false, type: '', message: '' })
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 10
 
   const stats = getStats()
 
@@ -44,6 +48,45 @@ const AllBlogs = () => {
 
     return matchesSearch && matchesFilter
   })
+
+  // Pagination logic
+  const paginationData = useMemo(() => {
+    const totalItems = filteredBlogs.length
+    const totalPages = Math.ceil(totalItems / itemsPerPage)
+    const startIndex = (currentPage - 1) * itemsPerPage
+    const endIndex = startIndex + itemsPerPage
+    const paginatedBlogs = filteredBlogs.slice(startIndex, endIndex)
+
+    return {
+      totalItems,
+      totalPages,
+      paginatedBlogs,
+      hasNextPage: currentPage < totalPages,
+      hasPrevPage: currentPage > 1
+    }
+  }, [filteredBlogs, currentPage, itemsPerPage])
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1)
+  }, [searchTerm, filterStatus])
+
+  // Pagination handlers
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+  }
+
+  const handlePrevPage = () => {
+    if (paginationData.hasPrevPage) {
+      setCurrentPage(currentPage - 1)
+    }
+  }
+
+  const handleNextPage = () => {
+    if (paginationData.hasNextPage) {
+      setCurrentPage(currentPage + 1)
+    }
+  }
 
   const handleEdit = (blogId) => {
     navigate(`/admin/blog/edit/${blogId}`)
@@ -266,9 +309,9 @@ const AllBlogs = () => {
         {/* Blogs Table */}
         <div className="bg-white rounded-lg border border-gray-200">
           <div className="p-6 border-b border-gray-200">
-            <h2 className="text-lg font-semibold text-gray-900">
-              Blog Posts ({filteredBlogs.length})
-            </h2>
+            <h4>
+              Blog Posts ({paginationData.totalItems})
+            </h4>
           </div>
           
           {filteredBlogs.length === 0 ? (
@@ -292,7 +335,7 @@ const AllBlogs = () => {
           ) : (
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-50">
+                <thead className="bg-gray-50 sticky top-0 z-10">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Title
@@ -300,9 +343,9 @@ const AllBlogs = () => {
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Status
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    {/* <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Author
-                    </th>
+                    </th> */}
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Created
                     </th>
@@ -315,7 +358,7 @@ const AllBlogs = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredBlogs.map((blog) => (
+                  {paginationData.paginatedBlogs.map((blog) => (
                     <tr key={blog._id} className="hover:bg-gray-50">
                       <td className="px-6 py-4">
                         <div className="flex items-center">
@@ -339,12 +382,12 @@ const AllBlogs = () => {
                       <td className="px-6 py-4 whitespace-nowrap">
                         {getStatusBadge(blog.status)}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      {/* <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           <User className="h-4 w-4 text-gray-400 mr-2" />
                           <span className="text-sm text-gray-900">Admin</span>
                         </div>
-                      </td>
+                      </td> */}
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {formatDate(blog.createdAt)}
                       </td>
@@ -399,6 +442,98 @@ const AllBlogs = () => {
                   ))}
                 </tbody>
               </table>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {paginationData.totalPages > 1 && (
+            <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+              <div className="flex-1 flex justify-between sm:hidden">
+                <button
+                  onClick={handlePrevPage}
+                  disabled={!paginationData.hasPrevPage}
+                  className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Previous
+                </button>
+                <button
+                  onClick={handleNextPage}
+                  disabled={!paginationData.hasNextPage}
+                  className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Next
+                </button>
+              </div>
+              <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-sm text-gray-700">
+                    Showing{' '}
+                    <span className="font-medium">
+                      {Math.min((currentPage - 1) * itemsPerPage + 1, paginationData.totalItems)}
+                    </span>{' '}
+                    to{' '}
+                    <span className="font-medium">
+                      {Math.min(currentPage * itemsPerPage, paginationData.totalItems)}
+                    </span>{' '}
+                    of{' '}
+                    <span className="font-medium">{paginationData.totalItems}</span>{' '}
+                    results
+                  </p>
+                </div>
+                <div>
+                  <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                    <button
+                      onClick={handlePrevPage}
+                      disabled={!paginationData.hasPrevPage}
+                      className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <ChevronLeft className="h-5 w-5" />
+                    </button>
+                    
+                    {/* Page numbers */}
+                    {Array.from({ length: paginationData.totalPages }, (_, i) => i + 1).map((page) => {
+                      // Show first page, last page, current page, and pages around current page
+                      const shouldShow = 
+                        page === 1 || 
+                        page === paginationData.totalPages || 
+                        Math.abs(page - currentPage) <= 1
+                      
+                      if (!shouldShow) {
+                        // Show ellipsis for gaps
+                        if (page === 2 && currentPage > 4) {
+                          return <span key={page} className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">...</span>
+                        }
+                        if (page === paginationData.totalPages - 1 && currentPage < paginationData.totalPages - 3) {
+                          return <span key={page} className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">...</span>
+                        }
+                        return null
+                      }
+                      
+                      return (
+                        <button
+                          key={page}
+                          onClick={() => handlePageChange(page)}
+                          className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
+                            page === currentPage
+                              ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                              : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'
+                          }`}
+                        >
+                          {page}
+                        </button>
+                      )
+                    })}
+                    
+                    <button
+                      onClick={handleNextPage}
+                      disabled={!paginationData.hasNextPage}
+                      className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <ChevronRight className="h-5 w-5" />
+                    </button>
+                  </nav>
+                </div>
+              </div>
             </div>
           )}
         </div>
