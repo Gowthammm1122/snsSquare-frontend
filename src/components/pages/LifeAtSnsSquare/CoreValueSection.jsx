@@ -53,9 +53,6 @@ const CoreValuesSection = () => {
           <h3 className="text-gray-900 mb-2 lg:text-left">
             Our core values define who we are
           </h3>
-          <p className="text-gray-600 mt-6  lg:text-left">
-            Our core values define who we are
-          </p>
         </div>
 
         {/* Values Cards Grid */}

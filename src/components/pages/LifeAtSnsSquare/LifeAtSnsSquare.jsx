@@ -79,7 +79,7 @@ export default function Page() {
             <div className="pt-8 sm:pt-10 md:pt-12 lg:pt-14 mb-6 sm:mb-8 md:mb-10 lg:mb-12 flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
                 <div className="">
                     <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl">What defines us</h3>
-                    <p className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 mb-3 sm:mb-4 md:mb-5 lg:mb-6 text-sm sm:text-base md:text-lg">What defines us</p>
+                    {/* <p className="mt-3 sm:mt-4 md:mt-5 lg:mt-6 mb-3 sm:mb-4 md:mb-5 lg:mb-6 text-sm sm:text-base md:text-lg">What defines us</p> */}
                 </div>
             </div>
             <div className="px-4 sm:px-6 lg:px-8">

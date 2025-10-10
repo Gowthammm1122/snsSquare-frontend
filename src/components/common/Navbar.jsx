@@ -90,6 +90,17 @@ const Header = () => {
       { label: 'Human Resource', href: '/usecase?category=human-resource', icon: '/icons/newicons/humanresource.svg' },
       { label: 'Insurance', href: '/usecase?category=insurance', icon: '/icons/newicons/insurance.svg' }
     ],
+    'our-products': [
+      { label: 'Square Bridge', href: '/products/square-bridge' },
+      { label: 'Medmatch', href: '/products/medmatch' },
+      { label: 'Hyrdragon', href: '/products/hyrdragon' },
+      { label: 'MiLAi', href: '/products/milai' },
+      { label: 'OKRion', href: '/products/okrion' }
+    ],
+    'about-us': [
+      { label: 'Life at SNS Square', href: '/life-at-sns' },
+      { label: 'About SNS Square', href: '/about-us' },
+    ],
   };
 
   const linkClasses = ({ isActive }) =>
@@ -335,24 +346,50 @@ const Header = () => {
             />
           </div>
 
-          <div className="relative group">
-            <NavLink
-              to="/life-at-sns"
-              className={linkClasses}
-              onClick={handleNavClick}
+          <div
+            className="relative group"
+            onMouseEnter={() => handleDropdownHover('our-products')}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <div
+              className="flex items-center cursor-pointer"
             >
-              Life at SNS Square
-            </NavLink>
+              <span className="text-small font-normal font-inter cursor-pointer transition-colors duration-300 text-black hover:text-blue-600">
+                Our Products
+              </span>
+              <AnimatedArrow
+                isHovered={hoveredDropdown === 'our-products'}
+                className="text-gray-400 hover:text-gray-600 ml-1"
+              />
+            </div>
+            <DropdownMenu
+              items={dropdownContent['our-products']}
+              isVisible={hoveredDropdown === 'our-products'}
+              dropdownKey="our-products"
+            />
           </div>
 
-          <div className="relative group">
-            <NavLink
-              to="/about-us"
-              className={linkClasses}
-              onClick={handleNavClick}
+          <div
+            className="relative group"
+            onMouseEnter={() => handleDropdownHover('about-us')}
+            onMouseLeave={handleDropdownLeave}
+          >
+            <div
+              className="flex items-center cursor-pointer"
             >
-              About Us
-            </NavLink>
+              <span className="text-small font-normal font-inter cursor-pointer transition-colors duration-300 text-black hover:text-blue-600">
+                Who we are
+              </span>
+              <AnimatedArrow
+                isHovered={hoveredDropdown === 'about-us'}
+                className="text-gray-400 hover:text-gray-600 ml-1"
+              />
+            </div>
+            <DropdownMenu
+              items={dropdownContent['about-us']}
+              isVisible={hoveredDropdown === 'about-us'}
+              dropdownKey="about-us"
+            />
           </div>
 
           <div className="relative group">
@@ -475,18 +512,66 @@ const Header = () => {
             } onClick={handleNavClick}>
               Use Cases
             </NavLink>
-            <NavLink to="/life-at-sns" className={({ isActive }) =>
-              `text-small font-normal font-inter cursor-pointer transition-all duration-200 rounded-md px-3 py-2 hover:bg-gray-100
-               ${isActive ? "text-blue-600 bg-blue-50" : "text-black hover:text-blue-600"}`
-            } onClick={handleNavClick}>
-              Life at SNS Square
-            </NavLink>
-            <NavLink to="/about-us" className={({ isActive }) =>
-              `text-small font-normal font-inter cursor-pointer transition-all duration-200 rounded-md px-3 py-2 hover:bg-gray-100
-               ${isActive ? "text-blue-600 bg-blue-50" : "text-black hover:text-blue-600"}`
-            } onClick={handleNavClick}>
-              About Us
-            </NavLink>
+            
+            {/* Our Products Section */}
+            <div className="space-y-1">
+              <div className="text-small font-normal font-inter text-gray-700 px-3 py-2">
+                Our Products
+              </div>
+              <div className="ml-4 space-y-1">
+                <button
+                  onClick={() => handleDropdownItemClick('/products/square-bridge')}
+                  className="w-full text-left text-small font-normal font-inter text-gray-700 hover:bg-gray-100 rounded-md px-3 py-2 transition-colors duration-200"
+                >
+                  Square Bridge
+                </button>
+                <button
+                  onClick={() => handleDropdownItemClick('/products/medmatch')}
+                  className="w-full text-left text-small font-normal font-inter text-gray-700 hover:bg-gray-100 rounded-md px-3 py-2 transition-colors duration-200"
+                >
+                  Medmatch
+                </button>
+                <button
+                  onClick={() => handleDropdownItemClick('/products/hyrdragon')}
+                  className="w-full text-left text-small font-normal font-inter text-gray-700 hover:bg-gray-100 rounded-md px-3 py-2 transition-colors duration-200"
+                >
+                  Hyrdragon
+                </button>
+                <button
+                  onClick={() => handleDropdownItemClick('/products/milai')}
+                  className="w-full text-left text-small font-normal font-inter text-gray-700 hover:bg-gray-100 rounded-md px-3 py-2 transition-colors duration-200"
+                >
+                  MiLAi
+                </button>
+                <button
+                  onClick={() => handleDropdownItemClick('/products/okrion')}
+                  className="w-full text-left text-small font-normal font-inter text-gray-700 hover:bg-gray-100 rounded-md px-3 py-2 transition-colors duration-200"
+                >
+                  OKRion
+                </button>
+              </div>
+            </div>
+
+            {/* About Us Section */}
+            <div className="space-y-1">
+              <div className="text-small font-normal font-inter text-gray-700 px-3 py-2">
+                Who we are
+              </div>
+              <div className="ml-4 space-y-1">
+                <NavLink to="/life-at-sns" className={({ isActive }) =>
+                  `text-small font-normal font-inter cursor-pointer transition-all duration-200 rounded-md px-3 py-2 hover:bg-gray-100
+                   ${isActive ? "text-blue-600 bg-blue-50" : "text-black hover:text-blue-600"}`
+                } onClick={handleNavClick}>
+                  Life at SNS Square
+                </NavLink>
+                <NavLink to="/about-us" className={({ isActive }) =>
+                  `text-small font-normal font-inter cursor-pointer transition-all duration-200 rounded-md px-3 py-2 hover:bg-gray-100
+                   ${isActive ? "text-blue-600 bg-blue-50" : "text-black hover:text-blue-600"}`
+                } onClick={handleNavClick}>
+                  About SNS Square
+                </NavLink>
+              </div>
+            </div>
             <NavLink to="/careers" className={({ isActive }) =>
               `text-small font-normal font-inter cursor-pointer transition-all duration-200 rounded-md px-3 py-2 hover:bg-gray-100
                ${isActive ? "text-blue-600 bg-blue-50" : "text-black hover:text-blue-600"}`

@@ -25,7 +25,6 @@ const TestimonialCards = () => {
         {/* Header */}
         <div className="mb-16 text-left">
           <h3 className=" text-gray-900 mb-2">In Their Own Words</h3>
-          <p className="text-gray-600 mt-6">In Their Own Words</p>
         </div>
 
         {/* Testimonial Cards Grid */}
