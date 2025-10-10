@@ -22,8 +22,8 @@ function App() {
       {isAdminRoute ? (
         <div className="flex flex-1">
           <AdminSidebar />
-          {/* Add left margin to account for fixed sidebar width */}
-          <main className="flex-1 bg-gray-50 ml-64 overflow-auto">
+          {/* Add left margin to account for fixed sidebar width on desktop only */}
+          <main className="flex-1 bg-gray-50 lg:ml-64 overflow-auto">
             <AppRoutes />
           </main>
         </div>

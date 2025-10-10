@@ -497,7 +497,7 @@ const Header = () => {
               `text-small font-normal font-inter cursor-pointer transition-all duration-200 rounded-md px-3 py-2 hover:bg-gray-100
                ${isActive ? "text-blue-600 bg-blue-50" : "text-black hover:text-blue-600"}`
             } onClick={handleNavClick}>
-              Resources
+              Blogs
             </NavLink>
           </nav>
           {isAuthenticated ? (
@@ -531,8 +531,7 @@ const Header = () => {
                 size="small"
                 className="w-full rounded-lg px-6 py-2 text-sm font-bold font-manrope bg-black text-white hover:bg-gray-800 transition-all duration-200 hover:scale-[1.02]"
                 onClick={() => {
-                  const event = new CustomEvent('openSignupModal');
-                  window.dispatchEvent(event);
+                  navigate("/signup");
                   closeMenu();
                 }}
               >
