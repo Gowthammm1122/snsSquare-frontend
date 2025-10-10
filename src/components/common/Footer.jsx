@@ -44,7 +44,7 @@ export default function Footer() {
 
       {/* Footer Links */}
       <div className="bg-white  mx-auto mb-6 p-8 rounded-lg shadow">
-        <div className=" px-6 pb-10 grid grid-cols-1 md:grid-cols-5 gap-10  ">
+        <div className=" px-6 pb-10 grid grid-cols-1 md:grid-cols-6 gap-10  ">
           {/* Logo */}
           <div>
             <img
@@ -89,6 +89,68 @@ export default function Footer() {
                   className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Customer Solutions
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Our Product */}
+          <div>
+            <h7 className="text-black mb-6">Our Product</h7>
+            <ul className="space-y-2 text-gray-600 mt-4">
+              <li>
+                <button
+                  onClick={() => {
+                    navigate("/products/square-bridge")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
+                >
+                  Square Bridge
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    navigate("/products/medmatch")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
+                >
+                  Medmatch
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    navigate("/products/hyrdragon")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
+                >
+                  Hyrdragon
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    navigate("/products/milai")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
+                >
+                  MiLAi
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    navigate("/products/okrion")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
+                >
+                  OKRion
                 </button>
               </li>
             </ul>
