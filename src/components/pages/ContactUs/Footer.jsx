@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaYoutube, FaLinkedin , FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const navigate = useNavigate()
+  
   return (
     <div >
       <footer className="bg-white mx-auto  p-8 rounded-md shadow ">
@@ -21,31 +23,37 @@ const Footer = () => {
             <h7 className="text-black mb-6">Agentic Workbench</h7>
             <ul className="space-y-2 text-gray-600 mt-4">
               <li>
-                <Link
-                  to="/agent-workbench/foundation-agents"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors text-small"
+                <button
+                  onClick={() => {
+                    navigate("/agent-workbench/foundation-agents")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Foundation Agent
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/agent-workbench/industry-specific-agents"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors text-small"
+                <button
+                  onClick={() => {
+                    navigate("/agent-workbench/industry-specific-agents")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Industrial Solutions
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/agent-workbench?type=customer"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors text-small"
+                <button
+                  onClick={() => {
+                    navigate("/agent-workbench?type=customer")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Customer Solutions
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -62,13 +70,15 @@ const Footer = () => {
                 { path: "insurance", label: "Insurance" }
               ].map((item) => (
                 <li key={item.path}>
-                  <Link
-                    to={`/usecase?category=${item.path}`}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="hover:text-blue-400 transition-colors text-small"
+                  <button
+                    onClick={() => {
+                      navigate(`/usecase?category=${item.path}`)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    className="hover:text-blue-400 transition-colors text-small text-left"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -86,13 +96,15 @@ const Footer = () => {
                 { path: "/terms-of-service", label: "Terms of Service" }
               ].map((item) => (
                 <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="hover:text-blue-400 transition-colors text-small"
+                  <button
+                    onClick={() => {
+                      navigate(item.path)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    className="hover:text-blue-400 transition-colors text-small text-left"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>

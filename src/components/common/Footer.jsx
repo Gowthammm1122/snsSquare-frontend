@@ -1,10 +1,11 @@
 // src/components/Footer.jsx
 import { FaYoutube , FaLinkedin, FaInstagram} from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import BlackButton from "./BlackButton";
 
 export default function Footer() {
   const location = useLocation();
+  const navigate = useNavigate();
   const isCareersPage = location.pathname === '/careers';
   return (
     <footer id="footer" className="bg-gradient-to-r from-[#b3cbf7] via-[#D8E9FC] to-[#d2efff] font-inter px-8">
@@ -32,11 +33,11 @@ export default function Footer() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto mt-12">
              Step beyond automation. Empower your business with Agentic AI that thinks, acts, and grows, transforming ideas into outcomes at the speed of intelligence. The future isn’t coming. It’s agentic.
             </p>
-            <Link to="/contact-us">
+            <button onClick={() => navigate("/contact-us")}>
               <BlackButton className="rounded-[4px] px-6 py-[12px] lg:py-[14px] xl:py-[16px] text-lg font-medium font-manrope text-white w-fit mx-auto lg:mx-0 mt-[16px] lg:mt-[20px]">
                 Contact US
               </BlackButton>
-            </Link>
+            </button>
           </>
         )}
       </div>
@@ -58,31 +59,37 @@ export default function Footer() {
             <h7 className="text-black mb-6">Agentic Workbench</h7>
             <ul className="space-y-2 text-gray-600 mt-4">
               <li>
-                <Link
-                  to="/agent-workbench/foundation-agents"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors text-small"
+                <button
+                  onClick={() => {
+                    navigate("/agent-workbench/foundation-agents")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Foundation Agent
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/agent-workbench/industry-specific-agents"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors text-small"
+                <button
+                  onClick={() => {
+                    navigate("/agent-workbench/industry-specific-agents")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Industrial Solutions
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/agent-workbench?type=customer"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className="hover:text-blue-400 transition-colors text-small"
+                <button
+                  onClick={() => {
+                    navigate("/agent-workbench?type=customer")
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                  className="hover:text-blue-400 transition-colors text-small text-left"
                 >
                   Customer Solutions
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -99,13 +106,15 @@ export default function Footer() {
                 { path: "insurance", label: "Insurance" }
               ].map((item) => (
                 <li key={item.path}>
-                  <Link
-                    to={`/usecase?category=${item.path}`}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="hover:text-blue-400 transition-colors text-small"
+                  <button
+                    onClick={() => {
+                      navigate(`/usecase?category=${item.path}`)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    className="hover:text-blue-400 transition-colors text-small text-left"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -123,13 +132,15 @@ export default function Footer() {
                 { path: "/terms-of-service", label: "Terms of Service" }
               ].map((item) => (
                 <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="hover:text-blue-400 transition-colors text-small"
+                  <button
+                    onClick={() => {
+                      navigate(item.path)
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    className="hover:text-blue-400 transition-colors text-small text-left"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { 
   Search, 
   Filter, 
@@ -174,13 +174,13 @@ const AllBlogs = () => {
               <h1 className="text-2xl font-bold text-gray-900">All Blog Posts</h1>
               <p className="text-gray-600 mt-1">Manage your blog content</p>
             </div>
-            <Link
-              to="/admin/blog/new"
+            <button
+              onClick={() => navigate("/admin/blog/new")}
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Plus size={16} className="mr-2" />
               Add New Blog
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -281,13 +281,13 @@ const AllBlogs = () => {
                   : "Try adjusting your search or filter criteria."
                 }
               </p>
-              <Link
-                to="/admin/blog/new"
+              <button
+                onClick={() => navigate("/admin/blog/new")}
                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Plus size={16} className="mr-2" />
                 Create First Blog
-              </Link>
+              </button>
             </div>
           ) : (
             <div className="overflow-x-auto">

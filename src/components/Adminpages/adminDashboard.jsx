@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { 
   Search,
   Bell,
@@ -31,6 +31,7 @@ import { useBlogContext } from '../../contexts/BlogContext'
 
 
 const AdminDashboard = () => {
+  const navigate = useNavigate()
   // Get real blog stats from context
   const { getStats } = useBlogContext()
   const blogStats = getStats()
@@ -336,20 +337,20 @@ const AdminDashboard = () => {
               </div>
             </div>
             <div className="flex space-x-3">
-              <Link
-                to="/admin/blog/new"
+              <button
+                onClick={() => navigate("/admin/blog/new")}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 <span>New Blog</span>
-              </Link>
-              <Link
-                to="/admin/jobopenings/newJob"
+              </button>
+              <button
+                onClick={() => navigate("/admin/jobopenings/newJob")}
                 className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 <span>Post Job</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -397,12 +398,12 @@ const AdminDashboard = () => {
                         <p className="text-sm text-gray-500">Manage your blog posts</p>
                       </div>
                     </div>
-                    <Link 
-                      to="/admin/blogs"
+                    <button 
+                      onClick={() => navigate("/admin/blogs")}
                       className="text-blue-600 hover:text-blue-700 text-sm font-medium"
                     >
                       View All
-                    </Link>
+                    </button>
                   </div>
                   
                   <div className="mb-3">
@@ -435,12 +436,12 @@ const AdminDashboard = () => {
                     </div>
                   </div>
                   
-                  <Link
-                    to="/admin/blog/new"
+                  <button
+                    onClick={() => navigate("/admin/blog/new")}
                     className="w-full bg-blue-50 text-blue-600 hover:bg-blue-100 py-2 px-4 rounded-lg text-sm font-medium text-center block transition-colors"
                   >
                     Create New Blog
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Job Openings Card */}
@@ -455,12 +456,12 @@ const AdminDashboard = () => {
                         <p className="text-sm text-gray-500">Manage job postings</p>
                       </div>
                     </div>
-                    <Link 
-                      to="/admin/jobs"
+                    <button 
+                      onClick={() => navigate("/admin/jobs")}
                       className="text-green-600 hover:text-green-700 text-sm font-medium"
                     >
                       View All
-                    </Link>
+                    </button>
                   </div>
                   
                   <div className="mb-3">
@@ -493,12 +494,12 @@ const AdminDashboard = () => {
                     </div>
                   </div>
                   
-                  <Link
-                    to="/admin/jobopenings/newJob"
+                  <button
+                    onClick={() => navigate("/admin/jobopenings/newJob")}
                     className="w-full bg-green-50 text-green-600 hover:bg-green-100 py-2 px-4 rounded-lg text-sm font-medium text-center block transition-colors"
                   >
                     Post New Job
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Use Cases Card */}
@@ -513,12 +514,12 @@ const AdminDashboard = () => {
                         <p className="text-sm text-gray-500">Showcase solutions</p>
                       </div>
                     </div>
-                    <Link 
-                      to="/admin/usecases"
+                    <button 
+                      onClick={() => navigate("/admin/usecases")}
                       className="text-purple-600 hover:text-purple-700 text-sm font-medium"
                     >
                       View All
-                    </Link>
+                    </button>
                   </div>
                   
                   <div className="mb-3">
@@ -551,12 +552,12 @@ const AdminDashboard = () => {
                     </div>
                   </div>
                   
-                  <Link
-                    to="/admin/usecase"
+                  <button
+                    onClick={() => navigate("/admin/usecase")}
                     className="w-full bg-purple-50 text-purple-600 hover:bg-purple-100 py-2 px-4 rounded-lg text-sm font-medium text-center block transition-colors"
                   >
                     Add Use Case
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -567,12 +568,12 @@ const AdminDashboard = () => {
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-gray-900">Recent Activity</h3>
-                <Link 
-                  to="/admin/activity"
+                <button 
+                  onClick={() => navigate("/admin/activity")}
                   className="text-blue-600 hover:text-blue-700 text-sm font-medium"
                 >
                   View All
-                </Link>
+                </button>
               </div>
 
               {/* Activity Stats Summary */}

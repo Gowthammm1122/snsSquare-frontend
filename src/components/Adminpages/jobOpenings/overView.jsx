@@ -1,8 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Plus, Users, FileText, Briefcase } from 'lucide-react'
 
 const OverView = () => {
+  const navigate = useNavigate()
+  
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -118,12 +120,12 @@ const OverView = () => {
           <div className="p-6 border-b border-gray-200">
             <div className="flex justify-between items-center">
               <h2 className="text-lg font-semibold text-gray-900">Recent Job Openings</h2>
-              <Link
-                to="/admin/jobopenings/newJob"
+              <button
+                onClick={() => navigate("/admin/jobopenings/newJob")}
                 className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Add New Job
-              </Link>
+              </button>
             </div>
           </div>
           

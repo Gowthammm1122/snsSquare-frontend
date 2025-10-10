@@ -1,5 +1,5 @@
 import { Home, MessageSquare, Newspaper, UsersRound, Globe, ChevronDown, ChevronRight, Plus, FileText, Users, List, Menu, X } from "lucide-react"
-import { Link, useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 
 // Navigation items data
@@ -31,6 +31,7 @@ const items = [
 
 export function Sidebar() {
   const location = useLocation()
+  const navigate = useNavigate()
   const [expandedMenus, setExpandedMenus] = useState({
     "/admin/jobopenings": true, // Keep job openings expanded by default
     "/admin/blog": true // Keep blogs expanded by default
@@ -151,10 +152,12 @@ export function Sidebar() {
                           
                           return (
                             <li key={subItem.href}>
-                              <Link 
-                                to={subItem.href} 
-                                className="relative block text-[16px] font-medium"
-                                onClick={isMobile ? closeMobileMenu : undefined}
+                              <button 
+                                onClick={() => {
+                                  navigate(subItem.href)
+                                  if (isMobile) closeMobileMenu()
+                                }}
+                                className="relative block text-[16px] font-medium w-full text-left"
                               >
                                 <div
                                   className={`flex items-center gap-3 pl-12 pr-6 py-3 transition-colors ${
@@ -167,7 +170,7 @@ export function Sidebar() {
                                   {/* Sub label */}
                                   <span>{subItem.label}</span>
                                 </div>
-                              </Link>
+                              </button>
                             </li>
                           )
                         })}
@@ -175,10 +178,12 @@ export function Sidebar() {
                     )}
                   </>
                 ) : (
-                  <Link 
-                    to={href} 
-                    className="relative block text-[18px] font-medium"
-                    onClick={isMobile ? closeMobileMenu : undefined}
+                  <button 
+                    onClick={() => {
+                      navigate(href)
+                      if (isMobile) closeMobileMenu()
+                    }}
+                    className="relative block text-[18px] font-medium w-full text-left"
                   >
                     <div
                       className={`flex items-center gap-4 px-6 py-4 transition-colors ${
@@ -196,7 +201,7 @@ export function Sidebar() {
                       {/* Label */}
                       <span className="relative z-[1]">{label}</span>
                     </div>
-                  </Link>
+                  </button>
                 )}
               </li>
             )
@@ -206,14 +211,16 @@ export function Sidebar() {
 
       {/* Back to Website Button */}
       <div className="p-6 border-t border-brand-navy/40">
-        <Link 
-          to="/" 
-          className="flex items-center gap-3 px-4 py-3 text-white/90 hover:text-white transition-colors rounded-lg border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10"
-          onClick={isMobile ? closeMobileMenu : undefined}
+        <button 
+          onClick={() => {
+            navigate("/")
+            if (isMobile) closeMobileMenu()
+          }}
+          className="flex items-center gap-3 px-4 py-3 text-white/90 hover:text-white transition-colors rounded-lg border border-white/20 hover:border-white/40 bg-white/5 hover:bg-white/10 w-full text-left"
         >
           <Globe size={20} />
           <span className="font-medium">Back to Website</span>
-        </Link>
+        </button>
       </div>
     </>
   )

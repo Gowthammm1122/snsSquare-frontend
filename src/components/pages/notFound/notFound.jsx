@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function NotFound() {
+  const navigate = useNavigate()
+  
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 px-4">
       <div className="max-w-2xl w-full text-center">
@@ -19,12 +21,12 @@ export default function NotFound() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link
-            to="/"
+          <button
+            onClick={() => navigate("/")}
             className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
           >
             Go to Homepage
-          </Link>
+          </button>
           
           <button
             onClick={() => window.history.back()}
@@ -35,7 +37,7 @@ export default function NotFound() {
         </div>
         
         <div className="mt-12 text-gray-500">
-          <p>Need help? <Link to="/contact-us" className="text-indigo-600 hover:underline">Contact us</Link></p>
+          <p>Need help? <button onClick={() => navigate("/contact-us")} className="text-indigo-600 hover:underline">Contact us</button></p>
         </div>
       </div>
     </div>
