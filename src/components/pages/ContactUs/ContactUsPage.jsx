@@ -20,6 +20,8 @@ const ContactUsPage = () => {
     companyName: '',
     country: '',
     industry: '',
+    projectBudget: '',
+    currency: 'USD',
     message: '',
     consent: false
   });
@@ -76,6 +78,16 @@ const ContactUsPage = () => {
       newErrors.industry = 'Industry is required';
     }
 
+    if (!formData.projectBudget) {
+      newErrors.projectBudget = 'Project budget is required';
+    } else if (isNaN(formData.projectBudget) || parseFloat(formData.projectBudget) < 0) {
+      newErrors.projectBudget = 'Please enter a valid budget amount';
+    }
+
+    if (!formData.currency) {
+      newErrors.currency = 'Currency is required';
+    }
+
     if (!formData.consent) {
       newErrors.consent = 'You must consent to receive communications';
     }
@@ -99,6 +111,7 @@ const ContactUsPage = () => {
     setLoading(true);
 
     try {
+      console.log('Submitting form data:', formData);
       const response = await submitContactForm(formData);
       
       setSnackbar({
@@ -115,6 +128,8 @@ const ContactUsPage = () => {
         companyName: '',
         country: '',
         industry: '',
+        projectBudget: '',
+        currency: 'USD',
         message: '',
         consent: false
       });
@@ -242,27 +257,25 @@ const ContactUsPage = () => {
                   sx={textFieldStyles}
                 />
 
-                {/* Company Name */}
-                <TextField
-                  type="text"
-                  name="companyName"
-                  value={formData.companyName}
-                  onChange={handleInputChange}
-                  label="Company Name"
-                  variant="standard"
-                  fullWidth
-                  required
-                  error={!!errors.companyName}
-                  helperText={errors.companyName}
-                  disabled={loading}
-                  InputLabelProps={{
-                    sx: labelStyles
-                  }}
-                  sx={textFieldStyles}
-                />
-
-                {/* Country and Industry Row */}
+                {/* Company Name and Country Row */}
                 <div className="grid grid-cols-2 gap-8">
+                  <TextField
+                    type="text"
+                    name="companyName"
+                    value={formData.companyName}
+                    onChange={handleInputChange}
+                    label="Company Name"
+                    variant="standard"
+                    fullWidth
+                    required
+                    error={!!errors.companyName}
+                    helperText={errors.companyName}
+                    disabled={loading}
+                    InputLabelProps={{
+                      sx: labelStyles
+                    }}
+                    sx={textFieldStyles}
+                  />
                   <TextField
                     select
                     name="country"
@@ -287,6 +300,10 @@ const ContactUsPage = () => {
                       </MenuItem>
                     ))}
                   </TextField>
+                </div>
+
+                {/* Industry and Project Budget Row */}
+                <div className="grid grid-cols-2 gap-8">
                   <TextField
                     select
                     name="industry"
@@ -314,6 +331,66 @@ const ContactUsPage = () => {
                     <MenuItem value="consulting">Consulting</MenuItem>
                     <MenuItem value="other">Other</MenuItem>
                   </TextField>
+                  <div className="flex gap-2">
+                    <TextField
+                      select
+                      name="currency"
+                      value={formData.currency}
+                      onChange={handleInputChange}
+                      label="Currency"
+                      variant="standard"
+                      disabled={loading}
+                      InputLabelProps={{
+                        sx: labelStyles
+                      }}
+                      sx={{
+                        ...textFieldStyles,
+                        minWidth: '100px',
+                        '& .MuiInput-underline:before': {
+                          borderBottomColor: '#D1D5DB',
+                          borderBottomWidth: '2px',
+                        },
+                        '& .MuiInput-underline:hover:before': {
+                          borderBottomColor: '#9CA3AF',
+                          borderBottomWidth: '2px',
+                        },
+                        '& .MuiInput-underline:after': {
+                          borderBottomColor: '#3B82F6',
+                          borderBottomWidth: '2px',
+                        },
+                      }}
+                    >
+                      <MenuItem value="USD">USD</MenuItem>
+                      <MenuItem value="EUR">EUR</MenuItem>
+                      <MenuItem value="GBP">GBP</MenuItem>
+                      <MenuItem value="INR">INR</MenuItem>
+                      <MenuItem value="CAD">CAD</MenuItem>
+                      <MenuItem value="AUD">AUD</MenuItem>
+                      <MenuItem value="JPY">JPY</MenuItem>
+                      <MenuItem value="CNY">CNY</MenuItem>
+                    </TextField>
+                    <TextField
+                      type="number"
+                      name="projectBudget"
+                      value={formData.projectBudget}
+                      onChange={handleInputChange}
+                      label="Project Budget"
+                      variant="standard"
+                      fullWidth
+                      required
+                      error={!!errors.projectBudget}
+                      helperText={errors.projectBudget}
+                      disabled={loading}
+                      inputProps={{
+                        min: 0,
+                        step: 1000
+                      }}
+                      InputLabelProps={{
+                        sx: labelStyles
+                      }}
+                      sx={textFieldStyles}
+                    />
+                  </div>
                 </div>
 
                 {/* Message Field */}
@@ -321,7 +398,7 @@ const ContactUsPage = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  label="Leave us a message"
+                  label="Your challenges / Goals"
                   variant="standard"
                   fullWidth
                   multiline
