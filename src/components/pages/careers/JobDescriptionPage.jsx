@@ -1,25 +1,133 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import JodDecriptionHero from './JodDecriptionHero'
 import SEO from "../../common/SEO";
+import { careersAPI } from "../../../api/Service/careers";
 
 const JobDescriptionPage = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
+  const [job, setJob] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch job data from API
+  useEffect(() => {
+    const fetchJob = async () => {
+      try {
+        setLoading(true);
+        const response = await careersAPI.getPublishedJobById(id);
+        
+        if (response.success) {
+          setJob(response.data);
+        } else {
+          console.error('Failed to fetch job:', response.message);
+          setError(response.message);
+        }
+      } catch (error) {
+        console.error('Error fetching job:', error);
+        setError('Failed to load job details');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
+      fetchJob();
+    } else {
+      setError('No job ID provided');
+      setLoading(false);
+    }
+  }, [id]);
 
   const handleApplyClick = () => {
     navigate('/careers/JobApplicationPage');
   };
 
+  // Loading state
+  if (loading) {
+    return (
+      <div className="w-full bg-white">
+        <SEO 
+          title="Loading Job Description | SNS Square"
+          description="Loading job description..."
+          keywords="SNS Square, Job Description, Loading"
+          image="https://www.snssquare.com/images/og/job-description-og.jpg"
+          url="https://www.snssquare.com/careers/job-description"
+        />
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-4 lg:px-8 py-20">
+          <div className="flex justify-center items-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="w-full bg-white">
+        <SEO 
+          title="Job Not Found | SNS Square"
+          description="The requested job could not be found."
+          keywords="SNS Square, Job Not Found"
+          image="https://www.snssquare.com/images/og/job-description-og.jpg"
+          url="https://www.snssquare.com/careers/job-description"
+        />
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-4 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Job Not Found</h1>
+            <p className="text-gray-600 mb-8">{error}</p>
+            <button 
+              onClick={() => navigate('/careers')}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              Back to Careers
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // No job data
+  if (!job) {
+    return (
+      <div className="w-full bg-white">
+        <SEO 
+          title="Job Not Found | SNS Square"
+          description="The requested job could not be found."
+          keywords="SNS Square, Job Not Found"
+          image="https://www.snssquare.com/images/og/job-description-og.jpg"
+          url="https://www.snssquare.com/careers/job-description"
+        />
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-4 lg:px-8 py-20">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Job Not Found</h1>
+            <p className="text-gray-600 mb-8">The requested job could not be found.</p>
+            <button 
+              onClick={() => navigate('/careers')}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            >
+              Back to Careers
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full bg-white">
       <SEO 
-        title="Job Description | SNS Square"
-        description="Learn about the job description for the UI/UX Designer position at SNS Square. This role involves experience in manual and automation testing, knowledge of Java Programming, MySQL/PgSQL, Selenium, and Jmeter, and more."
-        keywords="SNS Square, Job Description, UI/UX Designer, Manual Testing, Automation Testing, Java Programming, MySQL/PgSQL, Selenium, Jmeter"
+        title={`${job.title} | SNS Square`}
+        description={`Learn about the ${job.title} position at SNS Square. ${job.location ? `Location: ${job.location}.` : ''} ${job.employmentType ? `Employment Type: ${job.employmentType}.` : ''}`}
+        keywords={`SNS Square, ${job.title}, Job Description, ${job.location || ''}, ${job.employmentType || ''}`}
         image="https://www.snssquare.com/images/og/job-description-og.jpg"
-        url="https://www.snssquare.com/careers/job-description"
+        url={`https://www.snssquare.com/careers/job/${job._id}`}
       />
-      <JodDecriptionHero />
+      <JodDecriptionHero jobTitle={job.title} jobLocation={job.location} />
 
       <div className="w-full max-w-[1440px] mx-auto pt-6 sm:pt-8 px-4 sm:px-4 lg:px-8">
         <div className="w-full h-px bg-black opacity-10 mb-8 sm:mb-12" />
@@ -38,40 +146,62 @@ const JobDescriptionPage = () => {
             {/* Line spacing below title */}
             <div className="mb-4 sm:mb-6"></div>
 
-            <div className="space-y-2 sm:space-y-3 text-black ">
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Experience in manual and automation testing.
-              </p>
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Knowledge of Java Programming (data types, variables, operators, flow control statements, methods (built-in as well as user-defined), Exception handling, File Handling, Database Operations, and OOPS concepts.
-              </p>
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Experience in MySQL/PgSQL.
-              </p>
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Experience in Selenium and Jmeter.
-              </p>
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Should be able to perform rigorous testing by creating large data sets, conduct back-end testing, and validate information as it flows through the system.
-              </p>
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Assist developers, support reps, and product managers in debugging issues.
-              </p>
-              <p className="flex items-start leading-relaxed">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-900 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"></span>
-                Re-test and verify the bugs/issues that have been fixed.
-              </p>
-            </div>
-
-            <p className="mt-4 sm:mt-6 text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Please note that we have requirements for this role in Chennai, Salem, Coimbatore, Tirunelveli, and Madurai.
-            </p>
+            {/* Job Description Content - Render HTML directly */}
+            <div 
+              className="job-description-content prose max-w-none text-black leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: job.description }}
+            />
+            
+            {/* Custom styles for job description */}
+            <style jsx>{`
+              .job-description-content {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                line-height: 1.7;
+                color: #1f2937;
+              }
+              
+              .job-description-content p {
+                margin: 0 0 1.25em 0;
+                color: #374151;
+              }
+              
+              .job-description-content strong {
+                font-weight: 600;
+                color: #111827;
+              }
+              
+              .job-description-content h1,
+              .job-description-content h2,
+              .job-description-content h3,
+              .job-description-content h4,
+              .job-description-content h5,
+              .job-description-content h6 {
+                font-weight: 600;
+                color: #111827;
+                margin: 1.5em 0 0.75em 0;
+              }
+              
+              .job-description-content ul,
+              .job-description-content ol {
+                margin: 1.25em 0;
+                padding-left: 1.625em;
+              }
+              
+              .job-description-content li {
+                margin: 0.5em 0;
+                color: #374151;
+              }
+              
+              .job-description-content a {
+                color: #2563eb;
+                text-decoration: underline;
+                text-underline-offset: 2px;
+              }
+              
+              .job-description-content a:hover {
+                color: #1d4ed8;
+              }
+            `}</style>
 
             {/* Apply Button */}
             <button 
@@ -97,37 +227,58 @@ const JobDescriptionPage = () => {
 
             <div className="space-y-3 sm:space-y-4">
               {/* Experience */}
-              <div className='flex flex-col gap-2'>
-                <h7 className="text-black mb-2 ">Experience</h7>
-                <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
-                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-blue-800 text-xs sm:text-sm font-medium">4-6 years</span>
+              {job.experienceLevel && (
+                <div className='flex flex-col gap-2'>
+                  <h7 className="text-black mb-2 ">Experience</h7>
+                  <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-blue-800 text-xs sm:text-sm font-medium">{job.experienceLevel}</span>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Type */}
-              <div className='flex flex-col gap-2'>
-                <h7 className="text-black mb-2 ">Type</h7>
-                <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
-                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-blue-800 text-xs sm:text-sm font-medium">Full-Time</span>
+              {job.employmentType && (
+                <div className='flex flex-col gap-2'>
+                  <h7 className="text-black mb-2 ">Type</h7>
+                  <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-blue-800 text-xs sm:text-sm font-medium">{job.employmentType}</span>
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Workplace Type */}
-              <div className='flex flex-col gap-2'>
-                <h7 className="text-black mb-2 ">Workplace Type</h7>
-                <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
-                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-blue-800 text-xs sm:text-sm font-medium">On-site</span>
+              {job.workplaceType && (
+                <div className='flex flex-col gap-2'>
+                  <h7 className="text-black mb-2 ">Workplace Type</h7>
+                  <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-blue-800 text-xs sm:text-sm font-medium">{job.workplaceType}</span>
+                  </div>
                 </div>
-              </div>
+              )}
+
+              {/* Application Deadline */}
+              {job.applicationDeadline && (
+                <div className='flex flex-col gap-2'>
+                  <h7 className="text-black mb-2 ">Application Deadline</h7>
+                  <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-[#D1DFFA] rounded">
+                    <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-800" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-blue-800 text-xs sm:text-sm font-medium">
+                      {new Date(job.applicationDeadline).toLocaleDateString()}
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

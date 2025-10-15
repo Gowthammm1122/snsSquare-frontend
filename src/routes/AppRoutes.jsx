@@ -77,7 +77,7 @@ export default function AppRoutes() {
       <Route path="/terms-of-service" element={<PolicyPage />} />
 
       {/* Careers Routes */}
-      <Route path="/careers/:id" element={<JobDescription />} />
+      <Route path="/careers/job/:id" element={<JobDescription />} />
       <Route path="/careers/JobApplicationPage" element={<JobApplicationPage />} />
 
       {/* ADMIN ONLY Routes */}
@@ -130,6 +130,18 @@ export default function AppRoutes() {
       } />
       
       <Route path="/admin/jobopenings/applications" element={
+        <RoleBasedRoute allowedRoles={['admin']}>
+          <AdminCareer />
+        </RoleBasedRoute>
+      } />
+      
+      <Route path="/admin/jobopenings/edit/:id" element={
+        <RoleBasedRoute allowedRoles={['admin']}>
+          <AdminCareer />
+        </RoleBasedRoute>
+      } />
+      
+      <Route path="/admin/jobopenings/preview/:id" element={
         <RoleBasedRoute allowedRoles={['admin']}>
           <AdminCareer />
         </RoleBasedRoute>

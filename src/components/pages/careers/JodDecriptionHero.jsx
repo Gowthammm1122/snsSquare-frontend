@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const JobDescriptionHero = ({ currentPage = "description", jobTitle = "UI/UX Designer" }) => {
+const JobDescriptionHero = ({ currentPage = "description", jobTitle = "UI/UX Designer", jobLocation = "Coimbatore, Tamilnadu, India" }) => {
   const navigate = useNavigate();
   const [copySuccess, setCopySuccess] = useState(false);
 
@@ -84,7 +84,7 @@ const JobDescriptionHero = ({ currentPage = "description", jobTitle = "UI/UX Des
             </h1>
             <div className='mt-2'>
             <h5 className=" text-black ">
-              Coimbatore,Tamilnadu,India
+              {jobLocation}
             </h5>
             </div>
           </div>

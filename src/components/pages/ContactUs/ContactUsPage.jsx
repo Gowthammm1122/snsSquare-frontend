@@ -14,8 +14,7 @@ import { submitContactForm } from '../../../api/Service/contact';
 
 const ContactUsPage = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     companyEmail: '',
     companyName: '',
     country: '',
@@ -56,8 +55,8 @@ const ContactUsPage = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.firstName.trim()) {
-      newErrors.firstName = 'First name is required';
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
     }
 
     if (!formData.companyEmail.trim()) {
@@ -122,8 +121,7 @@ const ContactUsPage = () => {
 
       // Reset form
       setFormData({
-        firstName: '',
-        lastName: '',
+        name: '',
         companyEmail: '',
         companyName: '',
         country: '',
@@ -203,40 +201,24 @@ const ContactUsPage = () => {
             {/* Right Content - Contact Form */}
             <div className="bg-white rounded-md shadow-sm border border-gray-200">
               <form onSubmit={handleSubmit} className="p-6 gap-8 flex flex-col">
-                {/* First Row - Name Fields */}
-                <div className="grid grid-cols-2 gap-8">
-                  <TextField
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    label="First Name"
-                    variant="standard"
-                    fullWidth
-                    required
-                    error={!!errors.firstName}
-                    helperText={errors.firstName}
-                    disabled={loading}
-                    InputLabelProps={{
-                      sx: labelStyles
-                    }}
-                    sx={textFieldStyles}
-                  />
-                  <TextField
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    label="Last Name"
-                    variant="standard"
-                    fullWidth
-                    disabled={loading}
-                    InputLabelProps={{
-                      sx: labelStyles
-                    }}
-                    sx={textFieldStyles}
-                  />
-                </div>
+                {/* Name Field */}
+                <TextField
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  label="Name"
+                  variant="standard"
+                  fullWidth
+                  required
+                  error={!!errors.name}
+                  helperText={errors.name}
+                  disabled={loading}
+                  InputLabelProps={{
+                    sx: labelStyles
+                  }}
+                  sx={textFieldStyles}
+                />
 
                 {/* Company Email */}
                 <TextField
@@ -322,14 +304,12 @@ const ContactUsPage = () => {
                     sx={textFieldStyles}
                   >
                     <MenuItem value="">Select Industry</MenuItem>
-                    <MenuItem value="technology">Technology</MenuItem>
-                    <MenuItem value="healthcare">Healthcare</MenuItem>
-                    <MenuItem value="finance">Finance</MenuItem>
-                    <MenuItem value="education">Education</MenuItem>
-                    <MenuItem value="retail">Retail</MenuItem>
-                    <MenuItem value="manufacturing">Manufacturing</MenuItem>
-                    <MenuItem value="consulting">Consulting</MenuItem>
-                    <MenuItem value="other">Other</MenuItem>
+                    <MenuItem value="Supply Chain">Supply Chain</MenuItem>
+                    <MenuItem value="Information Technology">Information Technology</MenuItem>
+                    <MenuItem value="Health Care">Health Care</MenuItem>
+                    <MenuItem value="Human Resource">Human Resource</MenuItem>
+                    <MenuItem value="Insurance">Insurance</MenuItem>
+                    <MenuItem value="Others">Others</MenuItem>
                   </TextField>
                   <div className="flex gap-2">
                     <TextField
